@@ -2,7 +2,7 @@ html {
 	scroll-behavior: smooth;
 }
 header {
-    height: 30px;
+    height: 10%;
     width: 100%;
     padding: 15px;
     position: fixed;
@@ -190,6 +190,10 @@ footer {
 @media only screen and (max-width: 375px) {
     .title .navbar .footerbar {
         font-size: 20px;
+        padding: 3px;
+    }
+    .navbar {
+        top: 60px;
     }
 }
 
