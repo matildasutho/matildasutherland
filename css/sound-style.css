@@ -1,0 +1,67 @@
+.sound-page {
+    width: 100%;
+    min-height: fit-content;
+    margin: 0 auto;
+    background-image: linear-gradient(180deg, #97b3e2, #d1c837);
+    display: flex;
+}
+#header-container {
+    width: 100%;
+    text-align: center;
+    padding: 10% 0%;
+}
+
+.mllid-video-page {
+    width: 100%; 
+    min-height: fit-content;
+    margin: 0 auto;
+    background-color: #d1c837;
+}
+#mllid_img {
+    max-width: 100%;
+   
+}
+#mllid_video {
+    position: absolute;
+    z-index: 50; 
+    padding: 3% 11%;
+}
+
+.mllid-text {
+    width: 80%;
+    min-height: fit-content;
+    font-size: 0px;
+    letter-spacing: 2px;
+    padding: 5% 6%;
+    margin: 0 auto;
+}
+.mllid-column {
+    display: table-cell;
+    width: 45%;
+    table-layout: fixed;
+    padding-right: 2%;   
+
+}
+.cm-root-page {
+    width: 100%; 
+    min-height: fit-content;
+    margin: 0 auto;
+    background-color: #2925cf;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(180deg, #c3c7eb, #23719a);
+}
+.cm-text {
+    width: 80%;
+    height: 100%;
+    font-size: 0px;
+    margin: 0 auto;
+    letter-spacing: 2px;
+    padding: 2% 5% 6% 5%;
+}
+#center-media {
+    margin: 0 auto;
+    text-align: center;
+}
+    
