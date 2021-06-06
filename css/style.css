@@ -187,7 +187,11 @@ footer {
         max-width: 250px;   
     }
 }
-
+@media only screen and (max-width: 375px) {
+    .title .navbar .footerbar {
+        font-size: 20px;
+    }
+}
 
 @keyframes fadein {
     from { opacity: 0; }
