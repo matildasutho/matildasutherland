@@ -22,8 +22,7 @@
 }
 .bio-container {
     font-size: 0px;
-    letter-spacing: 2px;
-    height: 768px;  
+    letter-spacing: 2px;  
     display: flex;
     flex-direction: column;
     table-layout: fixed;
