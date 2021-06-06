@@ -50,7 +50,7 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(180deg, #c3c7eb, #23719a);
+    background-image: linear-gradient(180deg, #c3c7eb, #578daa);
 }
 .cm-text {
     width: 80%;
