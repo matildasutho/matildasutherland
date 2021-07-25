@@ -23,16 +23,16 @@ body {
     height: fit-content;
     top: 10%;
     left: 10%; 
-    border-radius: 25px;  
+     
 }
 #mv_nav {
     position: absolute;
     z-index: 110;
     cursor: move;
-    background-color: rgba(46, 66, 32, 0.3);
+    background-color: rgba(46, 66, 32, 0.2);
     border: none;
-    border-radius: 25px;
-    box-shadow:  3px 3px 15px  #869183;
+    border-radius: 10px;
+    box-shadow:  2px 2px 8px  #869183;
     height: fit-content;
     width:fit-content;
     text-align: left;
