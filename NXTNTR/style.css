@@ -1,13 +1,20 @@
 body {
-    background-color: pink;
+    background-color: #fff0f9;
     color: purple;
-    font-size: 50px;
+    font-size: 13px;
     font-family: 'Courier New', Courier, monospace;
 }
-p {
-
+h1 {
+    color: blue;
+    font-size: 18px;
+    font-weight: 20;
 }
-.c-p-container {
+h2 {
+    color: yellow;
+    font-size: 18px;
+    font-weight: 20;
+}
+.fixed-wrapper {
     width: fit-content;
     height: fit-content;
     z-index: 100;
@@ -15,8 +22,26 @@ p {
 #code-poem {
     position: absolute;
     background: radial-gradient(lime, white);
-    padding: 50px;
+    padding: 11x;
     top: 10%;
     left: 5%;
     cursor: move;
+    font-size: 11px;
+}
+#f_p_a_h {
+    position: absolute;
+    background: linear-gradient(45deg, white, red , white);
+    padding: 10px;
+    top: 20%;
+    left: 20%;
+    cursor: move;
+    font-size: 11px;
+    color: black;
+}
+
+td, th {
+    width: 200px;
+}
+table {
+    padding: 5px;
 }
