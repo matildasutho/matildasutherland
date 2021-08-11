@@ -5,8 +5,11 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 h1 {
-    color: blue;
-    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    -webkit-text-stroke: 0.9px;
+    -webkit-text-stroke-color: black;
+    color: #fff0f9;
+    font-size: 25px;
     font-weight: 20;
 }
 h2 {
@@ -38,7 +41,33 @@ h2 {
     font-size: 11px;
     color: black;
 }
-
+#exitsense-btn {
+    position: absolute;
+    top: 60%;
+    right: 5%;
+    width:fit-content;
+    cursor: move;
+    padding: 50px;
+    background-image: url(img/elevator.png);
+    background-size: 150px 100px;
+    filter: blur(1px);
+}
+#exitsense-btn:hover {
+    filter:blur(0px);
+    transition: 30ms;
+}
+#firepit {
+    background-image: url(img/fire-flames.gif);
+    padding: 40px;
+}
+button {
+    background-color: #571f1e;
+    border-radius: 3px;
+    border: 4px groove #c21f1f;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    text-decoration: none;
+}
 td, th {
     width: 200px;
 }
