@@ -11,11 +11,11 @@ body {
     width: 100%;
     position: absolute;
     z-index: -100;
-    background-color: #f0e6f5;
+    background: linear-gradient( #fac8fa, #fcfafc);
 }
 #title {
     text-align: center;
-    color: #dec5e8;
+    color: #a789b3;
     width: 600px;
     margin: 0 auto;
 
