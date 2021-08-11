@@ -1,6 +1,7 @@
 // Make the DIV element draggable:
 dragElement(document.getElementById("code-poem"));
 dragElement(document.getElementById("f_p_a_h"));
+dragElement(document.getElementById("exitsense-btn"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
