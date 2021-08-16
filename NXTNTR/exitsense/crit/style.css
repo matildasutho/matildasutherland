@@ -1,37 +1,42 @@
+
 body {
  margin: 0;
  padding: 0;
  font-family: 'Times New Roman', Times, serif;
 }
 .mother {
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     position: absolute;
     z-index: -100;
     background: linear-gradient( #fac8fa, #fcfafc);
 }
 #title {
-    text-align: center;
-    color: #dec5e8;
-    width: 600px;
+    color: #a789b3;
     margin: 0 auto;
-    padding: 15%;
+    width: 80%;
+    height: 700px;
+    overflow: scroll;
 }
 #titletxxt {
-    font-size: 25px;
+    font-size: 16px;
     font-style: italic;
-    padding: 8%;
+    padding: 3%;
+    overflow: scroll;
+    text-align: center;
 }
 #nxxt {
     background: linear-gradient(32deg, rgba(20, 52, 255, 0.6) , rgba(121, 163, 116, 0.5) 70%, rgba(119, 45, 150, 0.6));
-    height: 50px;
-    width: 200px;
+    padding: 6px 13px;
     font-size: 20px;
     color: #f0e6f5;
     border-radius: 50px;
     box-shadow: 0px 0px 12px 3px #e787ff;
     border: none;
-    margin: 10px 30px;
+    position: absolute;
+    bottom: 8%;
+    left: 45%;
+    
 }
 #nxxt:hover {
     transition: 2s;
