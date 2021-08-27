@@ -60,6 +60,16 @@ h2 {
     background-image: url(img/fire-flames.gif);
     padding: 40px;
 }
+#cm-btn {
+    position: absolute;
+    top: 55%;
+    left: 15%;
+    width:fit-content;
+    cursor: move;
+    padding: 50px;
+    background-image: url(img/cowgirl.png);
+    background-size: 150px 100px;
+}
 button {
     background-color: #571f1e;
     border-radius: 3px;
