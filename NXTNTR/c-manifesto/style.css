@@ -21,6 +21,7 @@ body {
     flex-direction: column;
 }
 section {
+    position: absolute;
     padding: 5% 27%;
     height: 50rem;
 }
@@ -38,6 +39,9 @@ h2 {
     font-size: 1rem;
     color:#1a1a1a;
     text-align: left;
+}
+pre {
+    font-family: 'Hina Mincho', serif;
 }
 .fixed-wrapper {
     width: fit-content;
