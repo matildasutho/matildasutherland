@@ -43,8 +43,8 @@ h2 {
 }
 #exitsense-btn {
     position: absolute;
-    top: 60%;
-    right: 5%;
+    top: 55%;
+    left: 15%;
     width:fit-content;
     cursor: move;
     padding: 50px;
@@ -62,13 +62,28 @@ h2 {
 }
 #cm-btn {
     position: absolute;
-    top: 55%;
-    left: 15%;
+    top: 60%;
+    right: 5%;
     width:fit-content;
     cursor: move;
     padding: 50px;
     background-image: url(img/cowgirl.png);
     background-size: 150px 100px;
+}
+#void-btn {
+    position: absolute;
+    top: 15%;
+    left: 80%;
+    cursor: move;
+    padding: 120px 80px;
+    background-image: url(img/void.jpg);
+    background-size: cover;
+    opacity: 0.6;
+    text-align: center;
+}
+#void-btn:hover {
+    opacity: 1;
+    transition: 1s;
 }
 button {
     background-color: #571f1e;
