@@ -62,7 +62,7 @@ p2 {
     font-size: 35px;
     letter-spacing: 2px;
     padding: 20px 40px;
-    font-family: 'Modak', cursive;
+    font-family: 'Courier New', Courier, monospace;
 }
 .navbar {
     overflow: hidden;
@@ -73,7 +73,7 @@ p2 {
     top: 0px;
     padding: 0px 40px;
     font-size: 35px;
-    font-family: 'Modak', cursive;
+    font-family: 'Courier New', Courier, monospace;
 }
   
 .navbar a {
@@ -84,7 +84,7 @@ p2 {
     padding: 20px; 
 }
 a {
-    color: #b789b9;
+    color: #6b6651;
 }
 a:hover {
     color: #faffae;
@@ -116,7 +116,7 @@ footer {
     bottom: 0px;
     padding: 0px 40px;
     font-size: 35px;
-    font-family: 'Modak', cursive;
+    font-family: 'Courier New', Courier, monospace;
     letter-spacing: 2px;
     
 }
