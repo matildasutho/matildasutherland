@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+header {
+    height: fit-content;
+    width: 100%;
+    position: fixed;
+    z-index: 20;
+    text-align: center;
+}
+#banner {
+    fill: var(--main);
+}
+#header-image {
+    max-width: 30vw;
+}
+body {
+    background-color: var(--background);
+    background-image: url(carrier_bag/bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: soft-light;
+    overflow: scroll;
+}
+:root {
+    --main: rgb(172, 194, 176);
+    --text: rgba(255, 253, 69, 0.85);
+    --link: rgba(214, 109, 109, 0.85);
+    --background: rgba(202, 198, 189, 0.973);
+}
+.wave {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+#outline {
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    z-index: -1;
+    fill: var(--main);
+    overflow: hidden;
+}
+#longshell {
+    width: 15%;
+    position: fixed;
+    bottom: 0%;
+    left: 10%;
+    z-index: -1;
+    fill: var(--main);
+    overflow: hidden;
+}
+#sea-color {
+    fill: none;
+}
+.boxes {
+    width: 100%;
+    height: fit-content;
+    fill: var(--text);
+    text-align: center;
+    padding: 1vh;
+}
+button {
+    width: 200px;
+    padding: 10px;
+    margin: 6px;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 30px;
+    color: var(--text);
+    border: 1px solid var(--text);
+}
+button:hover {
+    color: var(--link);
+    border: 2px solid var(--link);
+}
+#swim, #theres, #and, #let {
+
+    width: 50vw;
+    padding: 8%;
+}
+#swim {
+    float: left;
+}
+#theres {
+    float: right;
+}
+#and {
+    float: left;
+}
+#let {
+    float: right;
+}
