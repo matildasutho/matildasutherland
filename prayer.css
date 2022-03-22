@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+:root {
+    --main: rgb(153, 40, 40);
+    --text: rgba(255, 253, 69, 0.85);
+    --link: rgba(196, 57, 57, 0.85);
+    --background: rgba(170, 161, 141, 0.973);
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--background);
+    background-image: url(carrier_bag/bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: soft-light;
+    overflow: scroll;
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+}
+header {
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+}
+#banner {
+    fill: var(--main);
+    margin: 0 auto;
+}
+#title-text {
+    height: 30vh;
+}
+#header-image {
+    max-height: 30vh;
+    fill: var(--main);
+}
+.wave {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+#outline {
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    z-index: -1;
+    fill: var(--main);
+    overflow: hidden;
+}
+#longshell {
+    width: 15%;
+    position: fixed;
+    bottom: 0%;
+    left: 10%;
+    z-index: -1;
+    fill: var(--main);
+    overflow: hidden;
+}
+#sea-color {
+    fill: none;
+}
+.boxes {
+    width: 100%;
+    height: fit-content;
+    fill: var(--text);
+    text-align: center;
+    padding: 1vh;
+}
+button {
+    width: 200px;
+    padding: 10px;
+    margin: 6px;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 30px;
+    color: var(--main);
+    border: 1px solid var(--main);
+    font-family: inherit;
+}
+button:hover {
+    color: var(--link);
+    border: 1px solid var(--link);
+    font-style: italic;
+}
+
+#swim {
+    position: fixed;
+    width: 20vw;
+    padding: 10% 4%;
+    top: 0;
+    left: 2;
+    fill: var(--main);
+}
+
+@media only screen and (max-width 400px) {
+    
+}
