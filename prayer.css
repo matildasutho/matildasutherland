@@ -4,20 +4,20 @@
 
 }
 :root {
-    --main: rgb(153, 40, 40);
+    --main: rgb(255, 255, 255);
     --text: rgba(255, 253, 69, 0.85);
     --link: rgba(196, 57, 57, 0.85);
-    --background: rgba(170, 161, 141, 0.973);
+    --background: rgba(0, 0, 0, 0.973);
 }
 
 body {
     height: 100vh;
     width: 100vw;
     background-color: var(--background);
-    background-image: url(carrier_bag/bg.png);
+    /*background-image: url(carrier_bag/bg.jpg);
     background-size: cover;
     background-attachment: fixed;
-    background-blend-mode: soft-light;
+    background-blend-mode: soft-light;*/
     overflow: scroll;
     display: block;
     font-family: 'Times New Roman', Times, serif;
@@ -37,11 +37,6 @@ header {
 #header-image {
     max-height: 30vh;
     fill: var(--main);
-}
-.wave {
-    position: fixed;
-    right: 0;
-    bottom: 0;
 }
 #outline {
     width: 100%;
@@ -80,6 +75,8 @@ button {
     color: var(--main);
     border: 1px solid var(--main);
     font-family: inherit;
+    font-size: 1em;
+    font-style: bold;
 }
 button:hover {
     color: var(--link);
@@ -96,6 +93,6 @@ button:hover {
     fill: var(--main);
 }
 
-@media only screen and (max-width 400px) {
+@media only screen and (max-width: 400px) {
     
 }
