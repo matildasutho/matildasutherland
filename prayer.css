@@ -67,7 +67,7 @@ header {
     padding: 1vh;
 }
 button {
-    width: 200px;
+    width: 230px;
     padding: 10px;
     margin: 6px;
     background: rgba(0, 0, 0, 0);
@@ -80,8 +80,8 @@ button {
 }
 button:hover {
     color: var(--link);
-    border: 1px solid var(--link);
-    font-style: italic;
+    opacity: 0.8;
+    border: 1px solid var(--main);
 }
 
 #swim {
@@ -94,5 +94,7 @@ button:hover {
 }
 
 @media only screen and (max-width: 400px) {
-    
+    #wave {
+        opacity: 0;
+    }
 }
