@@ -14,7 +14,7 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: rgb(183, 201, 218);
-    background-image: url(carrier_bag/bg.png);
+    background-image: url(carrier_bag/bg.jpg);
     /*background image is a zoomed in screen shot of the video*/
     background-blend-mode: hard-light;
     background-size: cover;
