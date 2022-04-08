@@ -1,8 +1,12 @@
 body {
     background-color: rgb(235, 229, 216);
+    width: 90vw;
 }
 #the-poem {
     width: 300vw;
+}
+p {
+  width: 90vw;
 }
 /*
 svg {
