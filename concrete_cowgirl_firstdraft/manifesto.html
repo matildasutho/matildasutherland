@@ -1,0 +1,37 @@
+<html><head>
+
+<title>The Cowgirl Manifesto</title></head>
+<link rel="stylesheet" href="carrier/manifesto.css">
+<link rel="stylesheet" href="carrier/style.css">
+<body>
+<span id="AboutDevTypeText" class="typeing"></span><span class='blinker'>&#32;</span>
+
+<script>var data = [
+    {
+      AboutDevTypeText: "<span><br>The Cowgirl Manifesto:<br><br><br>There are bones of a poem   <br>which tug at heartstrings<br>And jerk tears from his eyes.<br>A medium since lost to algorithm and mechanical emotions.<br><br>As he reads further, it’s a list.<br>A to do.<br>Some instructions, yelling - <br>Don’t look back! You must never look back.<br><br>To act without conscience, <br>Free from loyalty to any movement.<br>A way of life to live for himself,<br>Always reaching for the highest shelf<br><br>With no possibility it could be any different<br>He denies that he plays any real, held part<br>The Red Sea like Moses - a divine child he’s told<br>By parents whose intentions are humane<br><br>Death is questionable in a world where<br>We aren't taught to question<br>What we are taught, is to consume. <br>That we are prized, heroic pieces of a puzzle<br><br>That we are autonomous<br>And that they are wranglers<br>But there’s no mention of the Big Picture<br>The big Ranch, or the Big Data<br><br>This human centric perspective<br>Developed through lifetimes of inconsequential <br>action toward an inevitable destruction<br>of our beloved mother<br><br>We coral information<br>With no respect for its’ matter<br>Its’ subject matter<br>The substance of matter<br>The quality of matter<br><br>Matter as a physical, and as a digital<br>As though the two aren’t interconnected<br>As though the digital is independent<br>As though the essence of digital is so different to that which we can hold<br><br>His essence has been removed,<br>Whether he likes it or not<br>Without the wind, or the rain, or the sun<br>What’s really left?<br><br>The night<br>Where magic happens<br>People become shadows of themselves<br>Faceless, nameless, sexually liberated<br><br>But for him there’s a yellow fog<br>It rubs on windows, licking it’s tongue into the corners of his evening<br>Haunting him, he walks faster<br>He must beat the night home<br><br><br>Be safe in bed<br>Curled up in the bosom of his wife<br>Where he can dream:<br><br>She is benediction <br>She is the root connection<br>She is connecting with me<br><br>He acts<br>He withdraws<br>He imports money into his drawers <br>and calls it a looong day of data<br><br>He takes the money as a bonus<br>And that’s the worst part,<br>He takes<br><br>And there’s no giving back,<br>There’s no looking back<br>To look back requires questions<br>A discreet quest for more.<br><br>The idea that it’s each man for himself<br>Forgets that the value of a group<br>Is greater than the sum of its parts<br><br>And if we’re all part this<br>And part that,<br>I’m part Cowgirl and you’re part me<br>Then we’re all just Cowgirls<br>And we gotta sling too<br></span><br/>"
+}
+  ];
+  
+  var allElements = document.getElementsByClassName("typeing");
+  for (var j = 0; j < allElements.length; j++) {
+    var currentElementId = allElements[j].id;
+    var currentElementIdContent = data[0][currentElementId];
+    var element = document.getElementById(currentElementId);
+    var devTypeText = currentElementIdContent;
+  
+    // type code
+    var i = 0, isTag, text;
+    (function type() {
+      text = devTypeText.slice(0, ++i);
+      if (text === devTypeText) return;
+      element.innerHTML = text + `<span class='blinker'>&#32;</span>`;
+      var char = text.slice(-1);
+      if (char === "<") isTag = true;
+      if (char === ">") isTag = false;
+      if (isTag) return type();
+      setTimeout(type, 100);
+    })();
+  }
+  </script>
+</body></html>
+
