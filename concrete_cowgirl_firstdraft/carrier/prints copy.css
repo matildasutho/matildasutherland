@@ -1,0 +1,206 @@
+* {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+  }
+body {
+    background-color: rgb(29, 29, 29);
+}
+  #prints_wrapper {
+    transform: rotateX(65deg) rotateZ(330deg);
+    position: fixed;
+    z-index: -10;
+    top: -50vh;
+    left: 0vw;
+
+
+    
+    
+  }
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 80px;
+    padding: 10px;
+    translate: ;
+    
+  }
+  .row {
+   
+  
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.shoe {
+    display: block;
+    position: absolute;
+    size: 100%;   
+    margin: 20px 40px;   
+}
+.shoe:hover {
+    animation: 3s rotate;
+}
+.heel {
+    height: 30px;
+    width: 40px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 60% 60% 40% 40% / 30% 30% 30% 30%;
+    color: rgb(255, 0, 0);
+    font-size: 6px;
+    margin-bottom: 30px;
+    box-shadow: 1px 1px 20px 10px black;
+}
+.toe {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: rgb(255, 0, 0);
+    font-size: 8px;
+    box-shadow: 1px 1px 20px 10px  black;
+    height: 100px;
+    width: 40px;
+    border-radius: 60% 60% 40% 40% / 50% 50% 50% 50%;
+}
+
+#l1 {
+    animation: 1s fadein linear;
+}
+#r1 {
+    animation: 1.1s fadein linear;
+}
+#l2 {
+    animation: 1.2s fadein linear;
+}
+#r2 {
+    animation: 1.3s fadein linear;
+}
+#l3 {
+    animation: 1.4s fadein linear;
+}
+#r3 {
+    animation: 1.6s fadein linear;
+}
+#l4 {
+    animation: 1.8s fadein linear;
+}
+#r4 {
+    animation: 2s fadein linear;
+}
+         
+ 
+@keyframes rotate {
+  0% {
+      transform: rotateZ(0deg);
+  }
+  25% {
+      transform: rotateZ(90deg);
+  }
+  50% {
+      transform: rotateZ(180deg);
+  }
+  75% {
+      transform: rotateZ(270deg);
+  }
+  100% {
+      transform: rotateZ(360deg);
+  }
+        }
+
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        transform: skewX(15deg)
+    }
+    50% {
+        opacity: 0;
+        transform: skewX(15deg)
+    }
+    80% {
+        opacity: 0;
+        transform: skewX(15deg)
+    }
+    100% {
+        opacity: 1;
+        transform: skewX(0deg)
+    }
+}
+
+HTML CSSResult Skip Results Iframe
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+body {
+  height:100vh;
+  font-family: 'Poppins', sans-serif;
+  font-size:12vw;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+.disappear {
+  position: absolute;
+  left:0;
+  right:0;
+  margin: auto;
+  width:100%;
+  text-align: center;
+  height:fit-content;
+  bottom:0;
+  top:0;
+}
+.disappear span {
+  display: inline-block;
+  color:transparent;
+  text-shadow: 0px 0px 0px black;
+  animation: 5s linear ;
+}
+.disappear span:nth-child(1){
+  animation-name: disappearleft;
+}
+.disappear span:nth-child(2){
+  animation-name: disappearleft;
+  animation-delay: .3s;
+}
+.disappear span:nth-child(3){
+  animation-name: disappearight;
+  animation-delay: .6s;
+}
+.disappear span:nth-child(4){
+  animation-name: disappearleft;
+  animation-delay: .8s;
+}
+.disappear span:nth-child(5){
+  animation-name: disappearight;
+  animation-delay: 1s;
+}
+.disappear span:nth-child(6){
+  animation-name: disappearight;
+  animation-delay: 1.3s;
+}
+.disappear span:nth-child(7){
+  animation-name: disappearleft;
+  animation-delay: 1.6s;
+}
+.disappear span:nth-child(8){
+  animation-name: disappearight;
+  animation-delay: 2s;
+}
+.disappear span:nth-child(9){
+  animation-name: disappearight;
+  animation-delay: 2.3s;
+}
+@keyframes disappearleft{
+  50% {transform: skew(50deg) translateY(-200%);
+      text-shadow: 0px 0px 50px;
+        opacity: 0;
+  }
+}
+@keyframes disappearight{
+  50% {transform: skew(-50deg) translateY(-200%);
+      text-shadow: 0px 0px 50px;
+        opacity: 0;
+  }
+}
