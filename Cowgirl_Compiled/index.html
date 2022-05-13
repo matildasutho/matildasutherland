@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concrete Cowgirl</title>
+    <link rel="stylesheet" href="carrier/style.css">
+</head>
+<body>
+
+<!--Gray hat page START-->
+<div id="hat">
+  <a><img id="gray_hat" src="carrier/gray_hat.png"></a>
+</div> 
+<!--Gray hat page END-->
+
+
+<!--MOONRISE START-->
+
+<div id="moonrise">
+    <span id="AboutDevTypeText" class="moon_type"></span><span class='blinker'>&#32;</span>
+    <div class="moon">
+    <pre>
+        <a id="rising-moon" style=" text-decoration: none; color: white; text-shadow: 5px 2px 20px white;">
+
+            +   __.,:*:*,                       #
+    o   *    .-=.__*((((*))),       +
+                   '-((æ æ))*)),            *
+        |              \ = /(((((,
+      - π -             )-()))*))),
+  +     |              /'    \(((((*    "
+            +        //(_|_)\\){+))),
+      @              \\ )%(((*(((((*)              +
+                      \(/ /  /))))*))(
+                .      '\ \ */((( ))('      o
+ "                        \ \ )) (*()'
+                           \  \(((')'
+        *                  |` /))*) `          {*
+    .                     /   ))-))`
+         _.          __.-`   ((()`
+              .__.~--`   __.-(*
+                `~--~``~"*
+         +                          .          |
+                                             - π -
+                    *          =               |
+
+</a>
+</pre>
+</div>
+</div><!--MOONRISE END-->
+
+<!--BREAKFAST START-->
+<div id="breakfast">
+    <script>
+let funcArr = [
+function() {
+        window.open("smaller/r.html", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=0,left=0,width=400,height=400");
+        window.open("smaller/e.html", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=0,left=0,width=350,height=350");
+        window.open("smaller/l2.html", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=0,left=0,width=300,height=300");
+        window.open("smaller/l.html", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=0,left=0,width=250,height=250");
+        window.open("smaller/a.html", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=0,left=0,width=200,height=200");
+        window.open("smaller/m.html", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=0,left=0,width=150,height=150");
+        window.open("smaller/s.html", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=0,left=0,width=100,height=100");
+    },
+
+];
+
+let i = 0;
+
+window.onload = function() {
+    let btn = document.getElementsByClassName('smaller-popup')[0];
+    btn.onclick = function() {
+        funcArr[i++ % funcArr.length](); // first call function and then, increment the value of i
+    }
+}
+    </script>
+    <div id="coffee">
+        A cup of black coffee, a book of T.S. Eliot <a href="poems.html" style="color: rgba(255, 255, 255, 0.4);" target="_blank">poems</a>
+    </div>
+
+    <div id="poems">
+        and a couple of <a href="manifesto.html" style="color: rgba(255, 255, 255, 0.4);" target="_blank">manifestos</a> to wash it down. 
+    </div>
+    
+    <div id="glitch">
+        A glitch, a metaphor, a <a href="ricecake.html" style="color: rgba(255, 255, 255, 0.4);" target="_blank">lab grown rice cake</a> with peanut butter to match, half ate.
+    </div>
+    
+    <div id="crunchy">
+        It's still crunchy so it'll do, plus the rations have been getting smaller and <span class="smaller-popup" style="color: rgba(255, 255, 255, 0.4); text-decoration: underline;">smaller</span>. 
+    </div>
+    
+   <div id="chip">
+    One day they'll be so small that they're dished out via <a href="rewild.html" style="color: rgba(255, 255, 255, 0.4);">micro-micro-chips</a>.
+   </div>
+
+</div>
+<!--wrap end-->
+<!--END BREAKFAST-->
+
+<script language="Javascript" src="js/script.js"></script>
+<script language="Javascript" src="js/type.js"></script>    
+
+
+</body>
+</html>
