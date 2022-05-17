@@ -1,107 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="carrier/style.css">
+    <title>Concrete Cowgirl</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Concrete Cowgirl</title>
-    <link rel="stylesheet" href="carrier/style.css">
+
 </head>
-<body>
+<body style="overflow: hidden;">
+<!--welcome text-->
+<div class="text-wrap">
+<span id="AboutDevTypeText" class="typeing"></span><span class='blinker'>&#32;</span>
+<br>
+<a id="link-to-ride" style="text-decoration: none;">✴</a>
+</div>
+<div id="link-wrap"></div>
 
-<!--Gray hat page START-->
+</div>
+<br>
+<br>
+<!--spur to activate gray hat popup-->
+
+<!--gray hat, animation below-->
+<div class="hidden" id="hat-wrap">
 <div id="hat">
-  <a><img id="gray_hat" src="carrier/gray_hat.png"></a>
+    <a><img id="gray_hat" src="carrier/gray_hat.png"></a>
 </div> 
-<!--Gray hat page END-->
-
-
+</div>
 <!--MOONRISE START-->
 
-<div id="moonrise">
-    <span id="AboutDevTypeText" class="moon_type"></span><span class='blinker'>&#32;</span>
-    <div class="moon">
+<div id="moonrise" class="hidden">
+    <p id="MoonTypeText">The Cowgirl rises with the moon, ready to spend the night lurking in the shadows.</p>
+    <div id="moon">
     <pre>
         <a id="rising-moon" style=" text-decoration: none; color: white; text-shadow: 5px 2px 20px white;">
 
-            +   __.,:*:*,                       #
+            +   __.,:*:*,                       #                   *                                           $
     o   *    .-=.__*((((*))),       +
-                   '-((æ æ))*)),            *
-        |              \ = /(((((,
+                   '-((æ æ))*)),            *           +                     .
+        |              \ = /(((((,                                                              *
       - π -             )-()))*))),
-  +     |              /'    \(((((*    "
+  +     |              /'    \(((((*    "                       @                               ||    
             +        //(_|_)\\){+))),
-      @              \\ )%(((*(((((*)              +
-                      \(/ /  /))))*))(
+      @              \\ )%(((*(((((*)              +                                .
+                      \(/ /  /))))*))(                                                                              #
                 .      '\ \ */((( ))('      o
  "                        \ \ )) (*()'
-                           \  \(((')'
+                           \  \(((')'                       *                   o                   ''                                         +
         *                  |` /))*) `          {*
     .                     /   ))-))`
-         _.          __.-`   ((()`
+         _.          __.-`   ((()`                                  ,                                                   ø
               .__.~--`   __.-(*
-                `~--~``~"*
+                `~--~``~"*                                                         *                                                *
          +                          .          |
                                              - π -
-                    *          =               |
+                    *          =               |                    ,                                   *}
 
-</a>
-</pre>
-</div>
+        </a>
+    </pre>
+    </div>
 </div><!--MOONRISE END-->
-
 <!--BREAKFAST START-->
-<div id="breakfast">
-    <script>
-let funcArr = [
-function() {
-        window.open("smaller/r.html", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=0,left=0,width=400,height=400");
-        window.open("smaller/e.html", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=0,left=0,width=350,height=350");
-        window.open("smaller/l2.html", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=0,left=0,width=300,height=300");
-        window.open("smaller/l.html", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=0,left=0,width=250,height=250");
-        window.open("smaller/a.html", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=0,left=0,width=200,height=200");
-        window.open("smaller/m.html", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=0,left=0,width=150,height=150");
-        window.open("smaller/s.html", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=0,left=0,width=100,height=100");
-    },
-
-];
-
-let i = 0;
-
-window.onload = function() {
-    let btn = document.getElementsByClassName('smaller-popup')[0];
-    btn.onclick = function() {
-        funcArr[i++ % funcArr.length](); // first call function and then, increment the value of i
-    }
-}
-    </script>
-    <div id="coffee">
-        A cup of black coffee, a book of T.S. Eliot <a href="poems.html" style="color: rgba(255, 255, 255, 0.4);" target="_blank">poems</a>
+<div id="breakfast" class="hidden">
+    <div id="coffee" class="hidden">
+        <br>
+        A cup of black coffee, a book of <a href="poems.html" style="color: rgba(255, 255, 255, 0.4);" target="_blank">poems</a>
     </div>
 
-    <div id="poems">
+    <div id="poems" class="hidden">
+    
+        <br>
         and a couple of <a href="manifesto.html" style="color: rgba(255, 255, 255, 0.4);" target="_blank">manifestos</a> to wash it down. 
     </div>
     
-    <div id="glitch">
+    <div id="glitch" class="hidden">
+        <br>
         A glitch, a metaphor, a <a href="ricecake.html" style="color: rgba(255, 255, 255, 0.4);" target="_blank">lab grown rice cake</a> with peanut butter to match, half ate.
     </div>
     
-    <div id="crunchy">
-        It's still crunchy so it'll do, plus the rations have been getting smaller and <span class="smaller-popup" style="color: rgba(255, 255, 255, 0.4); text-decoration: underline;">smaller</span>. 
+    <div id="crunchy" class="hidden">
+        <br>
+        It's still crunchy so it'll do, plus the rations have been getting smaller and <span style="color: rgba(255, 255, 255, 0.4); text-decoration: underline;">smaller</span>. 
     </div>
     
-   <div id="chip">
-    One day they'll be so small that they're dished out via <a href="rewild.html" style="color: rgba(255, 255, 255, 0.4);">micro-micro-chips</a>.
+   <div id="chip" class="hidden">
+    <br>
+    One day they'll be so small that they're dished out via <a href="micro.html" style="color: rgba(255, 255, 255, 0.4);">micro-micro-chips</a>.
    </div>
-
+   <!--
+<div id="stars" class="hidden">
+    <div class="asterix" id="three" style="position: absolute; top: 42; left: 88;">*</div>
+    <div class="asterix" id="four "style="position: absolute; top: 91; left: 41;">*</div>
+    <div class="asterix" id="five" style="position: absolute; top: 10; left: 90;">*</div>
+    <div class="asterix" id="six" style="position: absolute; top: 36; left: 10;">*</div>
+    <div class="plus">+</div>
+    <div class="plus">+</div>
+    <div class="plus">+</div>
+    <div class="plus">+</div>
+    <div class="plus">+</div>
+    <div class="fullstop">.</div>
+    <div class="fullstop">.</div>
+    <div class="fullstop">.</div>
+    <div class="fullstop">.</div>
+    <div class="fullstop">.</div>
+    <div class="atsign">@</div>
+    <div class="atsign">@</div>
+    <div class="atsign">@</div>
+    <div class="strasse">ß</div>
+    <div class="strasse">ß</div>
+</div>-->
 </div>
 <!--wrap end-->
-<!--END BREAKFAST-->
+<!--END BREAKFAST-->    
+<!--
+<script>
+        const moonType = document.getElementId("MoonTypeText");
+        moonType.className = "moon_type";
+    //moon typing
+    var data = [
+    {
+      MoonTypeText: "<span>The Cowgirl rises with the moon, ready to spend the night lurking in the shadows.</span><br/>"
+    }
+    ];
+      
+    var allElements = document.getElementsByClassName("moon_type");
+    for (var j = 0; j < allElements.length; j++) {
+    var currentElementId = allElements[j].id;
+    var currentElementIdContent = data[0][currentElementId];
+    var element = document.getElementById(currentElementId);
+    var devTypeText = currentElementIdContent;
+    
+    // type code
+    var i = 0, isTag, text;
+    (function moontype() {
+      text = devTypeText.slice(0, ++i);
+      if (text === devTypeText) return;
+      element.innerHTML = text + `<span class='blinker'>&#32;</span>`;
+      var char = text.slice(-1);
+      if (char === "<") isTag = true;
+      if (char === ">") isTag = false;
+      if (isTag) return type();
+      setTimeout(moontype, 70);
+    })();
+    }
+    
+    </script>-->
+<div id="compass" style="width: 25px; height: 25px; position: absolute; "></div><!--element to maybe get the scrolling animation to work-->
+<!--
+<script> 
+doit().then(function()) { 
+    document.documentElement.scrollTop = 0;
+    document.documentElement.scrollLeft = 2000;
+}
+async function doit() {
+    await hatThrow();
+}
 
-<script language="Javascript" src="js/script.js"></script>
-<script language="Javascript" src="js/type.js"></script>    
+function hatThrow() {
+    const hat = document.getElementById("gray_hat");
+    const hatMove = document.getElementById("hat");
 
-
+    hat.addEventListener("click", () => {
+    hat.style.animation = "10s fadein reverse";
+    hatMove.style.animation = "6s throwAway linear";
+    });
+    setTimeout(resolve, 2000);
+});
+</script>-->
+<script src="js/script.js"></script>
+<script src="js/smaller.js"></script>
 </body>
 </html>
