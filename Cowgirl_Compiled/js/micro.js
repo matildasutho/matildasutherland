@@ -48,7 +48,7 @@ var data = [
   })();
 //next step 
   (() => {
-    const texts = [
+    const textsTwo = [
       "pockets", 
       "'",
       "breadboards", 
@@ -60,7 +60,7 @@ var data = [
       "socket"
     ];
     
-    const getRandomText = () => texts[Math.floor(Math.random() * texts.length)];
+    const getRandomText = () => textsTwo[Math.floor(Math.random() * textsTwo.length)];
     const changeText = () => document.getElementById("text-pockets").innerHTML = getRandomText();
   
     changeText(); // call once while loading of the page
@@ -68,7 +68,7 @@ var data = [
   })();
 //next step 
   (() => {
-    const texts = [
+    const textsThree = [
      "draft",
       "limerick", 
       "spoken", 
@@ -80,7 +80,7 @@ var data = [
       "socket"
     ];
     
-    const getRandomText = () => texts[Math.floor(Math.random() * texts.length)];
+    const getRandomText = () => textsThree[Math.floor(Math.random() * textsThree.length)];
     const changeText = () => document.getElementById("text-draft").innerHTML = getRandomText();
   
     changeText(); // call once while loading of the page
@@ -88,7 +88,7 @@ var data = [
   })();
 //next step 
   (() => {
-    const texts = [
+    const textsFour = [
      "smoke",
       "blood", 
       "sill", 
@@ -100,7 +100,7 @@ var data = [
       "cowgirl"
     ];
     
-    const getRandomText = () => texts[Math.floor(Math.random() * texts.length)];
+    const getRandomText = () => textsFour[Math.floor(Math.random() * textsFour.length)];
     const changeText = () => document.getElementById("text-smoke").innerHTML = getRandomText();
   
     changeText(); // call once while loading of the page
@@ -108,7 +108,7 @@ var data = [
   })();
 //next step 
   (() => {
-    const texts = [
+    const textsFive = [
      "stop",
       "ghost", 
       "brim", 
@@ -121,7 +121,7 @@ var data = [
       "@"
     ];
     
-    const getRandomText = () => texts[Math.floor(Math.random() * texts.length)];
+    const getRandomText = () => textsFive[Math.floor(Math.random() * textsFive.length)];
     const changeText = () => document.getElementById("text-stop").innerHTML = getRandomText();
   
     changeText(); // call once while loading of the page
@@ -154,7 +154,7 @@ pageTurn.addEventListener("click", () => {
       cowgirlCall.style.animation = "3s regFade linear";
       cowgirlCall.style.zIndex = "5";
       oneCowgirl.className = "";
-    }, 13000);
+    }, 14000);
 })
 
 const twoCowgirl = document.getElementById("two-cowgirls");
@@ -166,21 +166,32 @@ const eightTwo = document.getElementById("eight-two");
 const eightThree = document.getElementById("eight-three");
 const eightFour = document.getElementById("eight-four");
 const eightFive = document.getElementById("eight-five");
+const irlFall = document.getElementById("irl-fall");
+const graveYard = document.getElementById("graveyard");
+const spurWrap = document.getElementById("spur-wrap");
+const spur = document.getElementById("spur");
+const bones = document.getElementById("bones");
+const nextMoonWrap = document.getElementById("nextMoon-wrap");
+const centeredMoon = document.getElementById("centered-moon");
+const grayHatTwo = document.getElementById("hat-wrap2");
+const hatTwo = document.getElementById("gray_hat2");
 
 oneCowgirl.addEventListener("click", () => {
     cowgirlCall.style.overflowY = "scroll";
     oneCowgirl.style.textDecoration = "none";
     oneCowgirl.style.animation = "2s cowgirlUp linear";
+    cowgirlCall.style.animation = "2s backgroundFade linear";
     setTimeout(() => {
       oneCowgirl.className = "hidden";
       twoCowgirl.className = "";
-      twoCowgirl.style.animation = "1.7s cowgirlUp linear";
+      twoCowgirl.style.animation = "1.8s cowgirlUp linear";
+      cowgirlCall.style.backgroundColor = "black";
     }, 1999);
     setTimeout(() => {
       twoCowgirl.className = "hidden";
       threeCowgirl.className = "";
       threeCowgirl.style.animation = "1.5s cowgirlUp linear";
-    }, 3795);
+    }, 3790);
     setTimeout(() => {
       threeCowgirl.className = "hidden";
       fourCowgirl.className = "";
@@ -209,5 +220,38 @@ oneCowgirl.addEventListener("click", () => {
     setTimeout(() => {
       eightFive.className = "";
     }, 9300);
+    setTimeout(() => {
+      irlFall.style.animation = "3s falling linear";
+    }, 13000);
+    setTimeout(() => {
+      irlFall.className = "hidden";
+    }, 14500);
+    setTimeout(() => {
+      graveYard.className = "";
+      graveYard.style.animation = "5s regFade linear";
+      graveYard.style.zIndex = "20";
+    }, 17000);
+    setTimeout(() => {
+      spurWrap.className = "";
+      spurWrap.style.zIndex = "30";
+      spurWrap.style.animation = "8s regFade linear";
+    }, 35200);
+    setTimeout(() => {
+      nextMoonWrap.style.zIndex = "35";
+      nextMoonWrap.className = ""; 
+      centeredMoon.className = "";
+      nextMoonWrap.style.animation = "5s regFade linear";
+      centeredMoon.style.animation = "70s moonUp linear";
+    }, 52300);
+    setTimeout(() => {
+      grayHatTwo.style.zIndex = "40";
+      grayHatTwo.className = "";
+      hatTwo.style.animation = "10s regFade linear";
+    }, 62000);
+    setTimeout(() => {
+      centeredMoon.className = "hidden";
+    }, 120000);
 });
+
+
 

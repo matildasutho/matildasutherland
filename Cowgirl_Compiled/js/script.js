@@ -35,7 +35,7 @@ var data = [
 
     const spur = document.getElementById("link-to-ride"); //click spur to let the hat in
     const popup = document.getElementById("hat-wrap");
-    const hat = document.getElementById("gray_hat");
+    const hat = document.getElementById("hat");
 
     spur.addEventListener("click", () => {
     popup.className = "";
