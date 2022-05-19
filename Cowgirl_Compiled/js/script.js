@@ -52,39 +52,24 @@ var data = [
     
     hat.addEventListener("click", () => {
     hat.style.animation = "10s fadein reverse";
-    hatMove.style.animation = "6s throwAway linear";
+    hatMove.style.animation = "8s throwAway linear";
     moonRise.className = "";
-    moonRise.style.animation = "8s regFade linear";
+    moonRise.style.animation = "6s regFade linear";
     moonScroll.style.animation = "60s scrolltext linear";
     });
     //enter breakfast, exit moontype
     const risingMoon = document.getElementById("rising-moon");
-    const eatBreakfast = document.getElementById("breakfast");
-    const coffee = document.getElementById("coffee");
-    const poems = document.getElementById("poems");
-    const glitch = document.getElementById("glitch");
-    const crunchy = document.getElementById("crunchy");
-    const chip = document.getElementById("chip");
+    const eatBreakfast = document.getElementById("breakfast-wrap");
+    //const coffee = document.getElementById("coffee");
+    //const poems = document.getElementById("poems");
+    //const glitch = document.getElementById("glitch");
+    //const crunchy = document.getElementById("crunchy");
+    //const chip = document.getElementById("chip");
 
     risingMoon.addEventListener("click", () => {
         eatBreakfast.style.animation = "1s regFade linear";
         eatBreakfast.className = "";
         eatBreakfast.style.zIndex = "23";
-        coffee.style.zIndex = "25";
-        coffee.className = "";
-        coffee.style.animation = "5s regFade linear";
-        poems.style.zIndex = "25";
-        poems.className = "";
-        poems.style.animation = "8s regFade linear";
-        glitch.style.zIndex = "25";
-        glitch.className = "";
-        glitch.style.animation = "11s regFade linear";
-        crunchy.style.zIndex = "25";
-        crunchy.className = "";
-        crunchy.style.animation = "16s regFade linear";
-        chip.style.zIndex = "25";
-        chip.className = "";
-        chip.style.animation = "21s regFade linear";
 
     });
 

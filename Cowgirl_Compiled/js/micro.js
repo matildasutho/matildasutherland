@@ -130,9 +130,9 @@ var data = [
 //transition to move into the laces
 const pageTurn = document.getElementById("text-stop");
 const fillPage = document.getElementById("fill-wrap");
-const lacesEnter = document.getElementById("laces-wrapper");
+const blackEnter = document.getElementById("black-wrapper");
 const page = document.getElementById("jungle");
-const laces = document.getElementById("laces");
+const black = document.getElementById("black");
 const cowgirlCall = document.getElementById("cowgirl-call");
 const oneCowgirl = document.getElementById("one-cowgirl");
 
@@ -141,20 +141,20 @@ pageTurn.addEventListener("click", () => {
     page.style.animation = "4s jungleturner linear";
     fillPage.style.animation = "4s lacesturner linear";
     setTimeout(function() {
-      lacesEnter.style.animation = "4s lacesturner linear";
+      blackEnter.style.animation = "4s lacesturner linear";
+      blackEnter.style.zIndex = "4"
       fillPage.style.animation = "4s jungleturner linear";
       page.style.left = "-100%";
     }, 4000)  
     setTimeout(function() {
-      lacesEnter.style.left = "0%";
-      lacesEnter.style.overflowY = "scroll";
+      blackEnter.style.left = "0%";
     }, 8000);
     setTimeout(function() {
       cowgirlCall.className = "";
       cowgirlCall.style.animation = "3s regFade linear";
       cowgirlCall.style.zIndex = "5";
       oneCowgirl.className = "";
-    }, 14000);
+    }, 9000);
 })
 
 const twoCowgirl = document.getElementById("two-cowgirls");
@@ -167,14 +167,9 @@ const eightThree = document.getElementById("eight-three");
 const eightFour = document.getElementById("eight-four");
 const eightFive = document.getElementById("eight-five");
 const irlFall = document.getElementById("irl-fall");
-const graveYard = document.getElementById("graveyard");
 const spurWrap = document.getElementById("spur-wrap");
 const spur = document.getElementById("spur");
-const bones = document.getElementById("bones");
-const nextMoonWrap = document.getElementById("nextMoon-wrap");
-const centeredMoon = document.getElementById("centered-moon");
-const grayHatTwo = document.getElementById("hat-wrap2");
-const hatTwo = document.getElementById("gray_hat2");
+
 
 oneCowgirl.addEventListener("click", () => {
     cowgirlCall.style.overflowY = "scroll";
@@ -227,30 +222,10 @@ oneCowgirl.addEventListener("click", () => {
       irlFall.className = "hidden";
     }, 14500);
     setTimeout(() => {
-      graveYard.className = "";
-      graveYard.style.animation = "5s regFade linear";
-      graveYard.style.zIndex = "20";
-    }, 17000);
-    setTimeout(() => {
       spurWrap.className = "";
-      spurWrap.style.zIndex = "30";
+      spurWrap.style.zIndex = "40";
       spurWrap.style.animation = "8s regFade linear";
-    }, 35200);
-    setTimeout(() => {
-      nextMoonWrap.style.zIndex = "35";
-      nextMoonWrap.className = ""; 
-      centeredMoon.className = "";
-      nextMoonWrap.style.animation = "5s regFade linear";
-      centeredMoon.style.animation = "70s moonUp linear";
-    }, 52300);
-    setTimeout(() => {
-      grayHatTwo.style.zIndex = "40";
-      grayHatTwo.className = "";
-      hatTwo.style.animation = "10s regFade linear";
-    }, 62000);
-    setTimeout(() => {
-      centeredMoon.className = "hidden";
-    }, 120000);
+    }, 11200);
 });
 
 
