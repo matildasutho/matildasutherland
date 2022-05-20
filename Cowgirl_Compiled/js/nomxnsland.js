@@ -36,6 +36,7 @@ const longDrive = document.getElementById("long-drive");
 const softDrive = document.getElementById("soft-drive");
 const hardDrive = document.getElementById("hard-drive");
 const laces = document.getElementById("laces-wrapper");
+const hiddenGraves = document.getElementById("hidden-graves");
 
 spiralWrap.addEventListener("click", () => {
     graveYard.style.animation = "40s gradientScroll linear";
@@ -137,10 +138,34 @@ spiralWrap.addEventListener("click", () => {
     }, 37000);
     setTimeout(() => {
         graveYard.style.left = "-70000px";
-        hardDrive.className = "hidden"
+        hardDrive.className = "hidden";
     }, 40000);
     setTimeout(() => {
-        graveYard.className = "hidden";
-        graveYard.style.zIndex = "-200";
-    }, 49000);
+        hiddenGraves.style.animation = "3s regFadeOut linear";
+    }, 54000);
+    setTimeout(() => {
+        hiddenGraves.className = "hidden";
+        hiddenGraves.style.zIndex = "-200";
+    }, 57000);
 });
+
+//function to open four new windows before proceeding to the next page
+let funcArr = [
+    function() {
+        window.open("https://www.youtube.com/watch?v=Yo-lRAdQxFg", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=500,left=000,width=600,height=400");
+        window.open("https://www.youtube.com/watch?v=H2REsVGanRw", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=200,left=0,width=400,height=300");
+        window.open("corral.html", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=-200,right=0,width=300,height=200");
+    },
+    function() {
+        window.open("spiral.html", "_self", "");
+    }
+];
+
+let i = 0;
+
+window.onload = function() {
+    let btn = document.getElementById('a')[0];
+    btn.onclick = function() {
+        funcArr[i++ % funcArr.length](); // first call function and then, increment the value of i
+    }
+}

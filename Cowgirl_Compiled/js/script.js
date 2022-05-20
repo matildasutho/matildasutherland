@@ -7,7 +7,7 @@
 
 var data = [
     {
-      AboutDevTypeText: "<span>Welcome to Concrete Cowgirl, a speck of dust in the neoCowgirl universe. A haunt for renegade hardware enthusiasts and software dilettantes alike.<br> <br>In order to experience this place holy you must let your guard down. This involves allowing popups for the duration of your stay (this setting is most probably located in preferences > security and privacy).<br> <br>I also invite you to explore the bountiful manipulations already at your finger tips. This ecosystem will respond to curious mouse clicks. <br> <br>The trick is knowing when to engage, and when to saddle up and simply<br> <br>Enjoy The Ride</span><br/>"
+      AboutDevTypeText: "<span>Welcome to Concrete Cowgirl, a speck of dust in the neoCowgirl universe. A haunt for renegade hardware enthusiasts and software dilettantes alike.<br> <br>In order to experience this place wholly you must let your guard down. This involves allowing popups for the duration of your stay (this setting is most probably located in preferences > security and privacy in your browser or device).<br> <br>I also invite you to explore the bountiful manipulations already at your fingertips. This ecosystem will respond to curious mouse clicks. <br> <br>The trick is knowing when to engage, and when to saddle up and simply<br> <br>Enjoy The Ride</span><br/>"
 }
   ];
   

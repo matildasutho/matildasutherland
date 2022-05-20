@@ -10,6 +10,12 @@ body {
     background-color: rgb(0, 0, 0);
     color: white;
 }
+.scrollbar {
+    scrollbar-width: none;
+}
+.scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 .text-wrap {
     width: 100vw;
     text-align: center;
@@ -33,7 +39,7 @@ body {
 #link-to-ride pre {
     color: red;
     font-size: 8em;
-    animation: 40s fadein ease-in-out;
+    animation: 1s fadein ease-in-out;
     text-shadow: 2px 2px 8px red, 2px 10px 40px red, -5px -10px 50px red;
 
 }
@@ -195,13 +201,14 @@ span:hover {
     font-size: 0.9em;
     border: 1px solid rgba(255, 255, 255, 0.6);
     margin: 100px 20px;
+    overflow: visible;
 
 }
 #windowType {
     margin: 10px;
     text-align: justify;
     position: absolute;
-    
+    overflow: visible;
     text-shadow: 0px 0px 20px white, -20px 70px 40px white;
     z-index: 0;
 }
@@ -231,12 +238,13 @@ span:hover {
   
 }
 #jungle {
-  display: inline-block;
+    display: inline-block;
     background-color: black;
     position: relative;
     width: 100vw;
     height: 100vh;
     animation: 30s fadein linear;
+    overflow: visible;
 }
 #fill-wrap {
   display: inline-block;
@@ -254,7 +262,7 @@ span:hover {
   background-color: black;
 }
 #black {
-  animation: lacesMove 12s steps(14, end) alternate-reverse infinite;
+  animation: blackMove 12s steps(14, end) alternate-reverse infinite;
   text-align: justify;
   word-wrap: break-word;
   padding-left: 1vh;
@@ -347,7 +355,9 @@ opacity: 0.6;
 }
 
 /*nomxnsland*/
-
+.fade-in {
+    animation: 6s regFade linear;
+}
 #menu-wrap {
     position: absolute;
     bottom: 0;
@@ -359,7 +369,7 @@ opacity: 0.6;
     padding: 20px;
     color: white;
     height: fit-content;
-    width: fit-content;
+    width: 30vw;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -374,7 +384,7 @@ opacity: 0.6;
     padding: 20px;
     color: white;
     height: fit-content;
-    width: fit-content;
+    width: 30vw;
     right: 43vw;
     position: absolute;
     bottom: 0;
@@ -390,7 +400,7 @@ opacity: 0.6;
     padding: 20px;
     color: white;
     height: fit-content;
-    width: fit-content;
+    width: 30vw;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -417,8 +427,8 @@ opacity: 0.6;
     position: absolute;
     top: 0;
     left: 0;  
-    z-index: -100; 
-    background-image: linear-gradient(360deg, rgb(45, 31, 4), rgb(1, 1, 16) 40%); 
+    z-index: -100;
+    background-image: linear-gradient(360deg, rgb(117, 80, 6), rgb(4, 4, 59) 40%); 
 }
 #centered-moon {
     position: absolute;
@@ -670,14 +680,121 @@ width: 21vw;
     height: 100vh;
     z-index: -200;
   }
-  #laces {
+#laces {
     animation: lacesMove 12s steps(14, end) alternate-reverse infinite;
     text-align: justify;
     word-wrap: break-word;
     padding-left: 1vh;
   }
 
+/*RODEO TIME*/
+#rodeo-wrap {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-color: yellow;
+}
+#fire-wrap {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+}
+#fire {
+    overflow: hidden;
+}
+#flame {
+    font-size: 8em;
+    fill: rgb(230, 120, 3);
+    animation: rotate 4s linear infinite;
+    text-decoration: none;
+    border: none;
+    text-shadow: 2px 2px 40px rgb(255, 157, 0);
+}
+#the-ring {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -100;
+}
+#circle-wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+.circle {
+    background-color: rgba(255, 89, 0, 0.706);
+    border-radius: 30% / 50%; 
+    animation: 30s morph infinite;
+}
+.circle a {
+  font-size: 2em;
+  color: rgb(47, 255, 0);
+  text-shadow: 5px 1px 20px rgb(255, 255, 255);
+}
+#rodeo-center {
+    padding-top: 38vh;
+    text-align: center;
+    font-size: 5em;
+    color: rgba(255, 255, 255, 0.6);
+    text-shadow: 0px 0px 100px white;
+    animation: 5s spurswell linear infinite;
+}
+a:hover{
+  color: red;
+  transition: 2s linear;
+}
+@keyframes morph {
+    0% {
+      border-radius: 10% 70% 70% 10% / 10% 10% 70% 70%;
+    }
+    25% { 
+      border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+    }
+    50% {
+      border-radius: 25% 25% 33% 67% / 55% 27% 73% 45%;
+    }
+    75% {
+      border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+    }
+    100% {
+      border-radius: 10% 70% 70% 10% / 10% 10% 70% 70%;
+    }
+  }
 
+  @keyframes colorchange {
+      0%   {background: #180f09;}
+      25%  {background: rgb(22, 4, 4);}
+      50%  {background: rgb(16, 11, 3);}
+      75%  {background: #140804;}
+      100% {background:   #140503;}
+}
+@-webkit-keyframes colorchange
+    {
+        0%   {background: #382314;}
+        25%  {background: rgb(47, 10, 10);}
+        50%  {background: rgb(40, 26, 3);}
+        75%  {background: #1b1f04;}
+        100% {background:   #2d0f0b;}
+} 
+
+@keyframes spurswell {
+  0% {
+    font-size: 60px;
+  }
+  60% {
+    font-size: 80px;
+  }
+  100% {
+    font-size: 60px;
+  }
+}
 @keyframes cactusTwist {
     0% {
         transform: matrix(0, 1, 0.3, 0, 35, 0);
@@ -805,8 +922,14 @@ width: 21vw;
   25% {
     letter-spacing: 5em;
   }
-  50% {
+  30% {
     letter-spacing: 8em;
+  }
+  35% {
+      letter-spacing: 0.1em;
+  }
+  55% {
+      letter-spacing: 0.8em;
   }
   75% {
     letter-spacing: 4em;
@@ -815,6 +938,23 @@ width: 21vw;
     letter-spacing: 6em;
   }
 }
+@keyframes blackMove {
+    0% {
+      letter-spacing: 0.2em;
+    }
+    25% {
+      letter-spacing: 0.3em;
+    }
+    50% {
+      letter-spacing: 0.1em;
+    }
+    75% {
+      letter-spacing: 0.4em;
+    }
+    100% {
+      letter-spacing: 0.2em;
+    }
+  }
 @keyframes endLaces {
   0% {
     letter-spacing: 6em;
