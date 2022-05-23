@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝕕𝕚𝕣𝕥𝓈𝓉𝓎𝓁𝑒</title>
+</head>
+<body>
+<header>
+    <div id="header-wrap">
+        <span id="one">d</span><span id="two">i</span><span id="three">r</span><span id="four">t</span>
+        <span id="five">s</span><span id="six">t</span><span id="seven">y</span><span id="eight">l</span><span id="nine">e</span>
+    </div>
+    <div id="toggle-wrap"> <!--containing the buttons to easily move them around the page-->
+        <button id="audio-toggle">audio <a id="audio-on" onclick="playAudio()">on</a> | <a id="audio-off" onclick="pauseAudio()">off</a></button> <!--will contain a toggle for the audio track on and off. Will display play state as well (i.e. audio on/off)-->
+        <button id="info-toggle">info</button> <!--called by the popup.js to allow toggle popup-->
+    </div>
+    <audio id="webpage_audio" src="dirtstyle_webpage_audio.mp3"></audio>
+</header>
+
+
+
+<div id="outer-wrap">
+<div class="container">
+        <span class="person" id="ione">I</span>
+        <span class="else">wanna</span>
+        <span class="action" id="be">be</span>
+        <span class="position" id="left">left</span>
+        <span class="position" id="behind">behind</span>
+
+        <span class="person" id="itwo">I</span>
+        <span class="else">wanna be so</span>
+        <span class="describe" id="fartwo">far</span>
+        <span class="else">behind that I can't even</span>
+        <span class="action" id="chase">chase</span> 
+        <span class="else">my</span>
+        <span class="object" id="tail">tail</span>
+</div>
+<div class="container">
+        <span class="person" id="ithree">I</span>
+        <span class="else">wanna be so </span>
+        <span class="position" id="sofar">far behind</span>
+        <span class="person">that I'm</span>
+        <span class="position">in a</span>
+        <span class="describe" id="ten">ten</span>
+        <span class="object" id="car">car</span>
+        <span class="object" id="pile">pile</span>
+        <span class="position" id="up">up</span>
+        <span class="person">before I</span>
+        <span class="action" id="reach">reach</span>
+        <span class="person">your</span>
+        <span class="object" id="bumper">bumper</span>
+</div>
+<div class="container">
+        <span class="person" id="ifour">I</span>
+        <span class="else">wanna be so far </span>
+        <span class="position">behind</span>
+        <span class="else">that my</span>
+        <span class="object" id="house">house</span>
+        <span class="else">is</span>
+        <span class="action" id="made">made </span>
+        <span class="else">out of</span>
+        <span class="object" id="horsehair">horse hair</span>
+        <span class="person">and my</span>
+        <span class="object" id="boots">boots</span>
+        <span class="else">are</span>
+        <span class="action" id="sewn">sewn</span>
+        <span class="else">in</span>
+        <span class="object" id="wax">wax</span>
+</div>
+<div class="container">
+
+        <span class="person" id="ifive">I</span>
+        <span class="else">wanna</span>
+        <span class="else">be so far behind that</span>
+        <span class="position">there's</span>
+        <span class="describe">no</span>
+        <span class="describe" id="record">record</span>
+        <span class="person">of me</span>
+        <span class="else">on a</span>
+        <span class="describe" id="soft">soft</span>
+        <span class="object" id="drive">drive</span>
+        <span class="else">or a</span>
+        <span class="describe" id="hard">hard</span>
+        <span class="action" id="drivetwo">drive</span>
+        
+</div>
+<div class="container">
+        <span class="person" id="isix">I</span>
+        <span class="else">wanna</span>
+        <span class="action" id="drivethree">drive</span>
+        <span class="else">so far back my</span>
+        <span class="object" id="wheels">wheels</span>
+        <span class="else">turn to squares</span>
+        <span class="person">and I'm</span>
+        <span class="position" id="stuck">stuck</span>
+        <span class="else">in a marsh</span>
+</div>
+<div class="container">
+        <span class="else">And the </span>
+        <span class="else">marsh</span>
+        <span class="else">doesn't</span>
+        <span class="action" id="move">move</span>
+        <span class="person">for me</span>
+        <span class="else">I'm so far</span>
+        <span class="position" id="behindtwo">behind</span>
+        <span class="else">I can't even</span>
+        <span class="action" id="sos">SOS</span>
+</div>
+<div class="container">
+        <span class="else">And the</span>
+        <span class="object" id="hills">hills</span>
+        <span class="else">start looking</span>
+        <span class="else">like</span>
+        <span>cliffs</span>
+        <span class="else">of</span>
+        <span class="describe" id="raw">raw</span>
+        <span>clay</span>
+        <span class="person">And then they're</span>
+        <span class="action" id="caving">caving</span>
+        <span class="position" id="in">in</span>
+</div>
+<div class="container">
+        <span class="else">And I'm</span>
+        <span class="describe" id="covered">covered</span>
+        <span class="else">in</span>
+        <span class="object" id="dirt">dirt</span>
+        <span class="else">And there's</span>
+        <span class="person">no one</span>
+        <span class="else">to</span>
+        <span class="action" id="call">call</span>
+</div>
+<div class="container">
+        <span>Cause I'm so</span>
+        <span class="position" id="far">far</span>
+        <span class="describe" id="behindthree">behind</span>
+        <span>And there is</span>
+        <span class="describe" id="no">no</span>
+        <span class="action" id="upgrade">upgrade</span>
+</div>
+</div>
+
+<div id="info-popup" class="hidden">
+    <div>
+      <div id="x">X</div>
+      <div class="wrapper">
+        <span class="action">I'm going pastoral.</span><span class="person">Not in the Shakespearean sense, in the sense that</span><span class="describe"> I don't want to upgrade.<span class="else"> I want to be left behind.</span>
+        <br>
+        <br>
+        <I>Dirtstyle</I> is intended as a single page net.art piece to be viewed by 
+        the user as the text ‘decays’ before their eyes. This code is heavily inspired 
+        by Daniel Temkin's esoteric language 'Entropy' - though it is a pared back emulation.
+      </div>
+    </div>
+  </div>
+    <script src="js/script.js"></script>
+    <script src="js/popup.js"></script>
+</body>
+</html>
