@@ -5,7 +5,7 @@ const x = document.getElementById("x");//get the X to close the popup
 //click event listener allows the user to click on the info-toggle button to view the info
 info.addEventListener("click", () => {
   popup.className = "";
-  popup.style.zIndex = "20";
+  popup.style.zIndex = "25";
 
 });
 //using the X to clearly signify closing the popup, again through click event listener

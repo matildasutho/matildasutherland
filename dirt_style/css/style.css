@@ -81,7 +81,7 @@ button {
     position: absolute;
     background: #000000;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin: 10%;
+    margin: 10vh 20vw;
     padding: 10px 30px;
     width: 60vw;
     height: 80vh;
@@ -108,7 +108,9 @@ button {
 .hidden {
     display: none;
 }
-  
+#audio-on, #audio-off, #info-toggle {
+    cursor: pointer;
+}
 @media (max-width: 500px) {
     body {
         font-size: 0.8em;
