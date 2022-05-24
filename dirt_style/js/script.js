@@ -1,26 +1,41 @@
 //audio toggle
-var webPageAudio = document.getElementById("webpage_audio");
-const audioOn = document.getElementById("audio-on");
-const audioOff = document.getElementById("audio-off");
+const webPageAudio = document.getElementById("webpage_audio"); //get the audio player
+const audioOn = document.getElementById("audio-on"); //get the on toggle
+const audioOff = document.getElementById("audio-off"); //get the off toggle
 
-
-function playAudio() { 
-  webPageAudio.play();
-  audioOn.style.textDecoration = "underline";
-  audioOff.style.textDecoration = "none";
+function playAudio() { /*this function is called by the audio-on toggle using an onclick event listener*/
+  webPageAudio.play(); /*standard function for playing audio*/
+  audioOn.style.textDecoration = "underline"; /*adding the underline to the selected audio option so the user can see the audio playstate*/
+  audioOff.style.textDecoration = "none"; /*ensuring the underline is no longer on the Off toggl, method repeated below*/
 }; 
 
-function pauseAudio() { 
-  webPageAudio.pause();
+function pauseAudio() { /*this function is called by the audio-off toggle using an onclick event listener*/
+  webPageAudio.pause(); /*standard function for pausing audio*/
   audioOn.style.textDecoration = "none";
-  audioOff.style.textDecoration = "underline";
+  audioOff.style.textDecoration = "underline"; 
 }; 
 
+//popup function
+const info = document.getElementById("info-toggle");//get the info-toggle button
+const popup = document.getElementById("info-popup");//get the popup itself
+const x = document.getElementById("x");//get the X to close the popup
+
+//click event listener allows the user to click on the info-toggle button to view the info
+info.addEventListener("click", () => {
+  popup.className = "";
+  popup.style.zIndex = "25"; /*places the popup infront of the toggle buttons */
+
+});
+//using the X to clearly signify closing the popup, again through click event listener
+x.addEventListener("click", () => {
+  popup.className = "hidden";
+  popup.style.zIndex = "-10"; /*a safeguard for hiding the popup fully behind other elements*/
+});
 
 
 //this is the script for the header
 
-var letters = [ // make variable, use global variable to call the string and replace indiviual timed-out functions for each letter
+var letters = [ // make variable, using variable to have the string called in multiple functions below. This method is repeated for each word class, using correpsonding strings
       "a",
       "b", 
       "c",  
@@ -63,15 +78,23 @@ var letters = [ // make variable, use global variable to call the string and rep
       "$"
     ];
     
-function one() {
-    const getRandomText = () => letters[Math.floor(Math.random() * letters.length)];
-    const changeText = () => document.getElementById("one").innerHTML = getRandomText();
+function one() { //function name
+    const getRandomText = () => letters[Math.floor(Math.random() * letters.length)]; /** gets the string to replace the text (letters), gets the lowest value in the string (Math.floor), 
+                                                                                    then selects a random value (Math.random) between the floor and the length of the letter string (* letters.length).
+                                                                                    This equation defined as getRandomText*/
+    const changeText = () => document.getElementById("one").innerHTML = getRandomText(); /** defined as changeText, this gets the element to apply teeh function to. In this case the "one" id tag.
+                                                                                        replaces its content (innerHTML) with a value from the string using the getRandomText function defined above*/
   
-    changeText(); 
-    setInterval(changeText, 2.2e3); 
+    changeText(); /**triggers the changeText function */
+    setInterval(changeText, 2.2e3); /**specifies the interval (2.2e3 - e3 means three 0s) between each time the function is called */
 };
-setTimeout(one, 10000);
+setTimeout(one, 10e3); /**settimeout applies a timed delay for the function to be called. Placed outside the one() function. You can see i've separated the 
+                        time out for each function within the different classes for between 10 and 30 seconds longer than the previous function.
+                        This gives a staggered effect, and I've timed them to suit the reading of the poem   - i.e. the function isn't called typically before the user has read that line of the poem */
 
+                        /**i'm not going to give a breakdown of every function as they are repeats of this one which act in the same way. The only difference is the interval at whcih th etext changes, and the time
+                         * at which th efunction is intially called, and the string that they pull from. I've grouped th efunctions below their corresponding string.
+                         */
 function two() {
     const getRandomText = () => letters[Math.floor(Math.random() * letters.length)];
     const changeText = () => document.getElementById("two").innerHTML = getRandomText();
@@ -79,7 +102,7 @@ function two() {
     changeText(); 
     setInterval(changeText, 7.6e3); 
 };
-setTimeout(two, 6000);
+setTimeout(two, 6e3);
 
 function three() {
     const getRandomText = () => letters[Math.floor(Math.random() * letters.length)];
@@ -88,7 +111,7 @@ function three() {
     changeText(); 
     setInterval(changeText, 4.2e3); 
 };
-setTimeout(three, 20000);
+setTimeout(three, 20e3);
 
 function four() {
     const getRandomText = () => letters[Math.floor(Math.random() * letters.length)];
@@ -97,7 +120,7 @@ function four() {
     changeText(); 
     setInterval(changeText, 8e3); 
 };
-setTimeout(four, 45000);
+setTimeout(four, 45e3);
 
 function five() {
     const getRandomText = () => letters[Math.floor(Math.random() * letters.length)];
@@ -106,7 +129,7 @@ function five() {
     changeText(); 
     setInterval(changeText, 1.3e3); 
 };
-setTimeout(five, 33000);
+setTimeout(five, 33e3);
 
 function six() {
     const getRandomText = () => letters[Math.floor(Math.random() * letters.length)];
@@ -115,7 +138,7 @@ function six() {
     changeText(); 
     setInterval(changeText, 6.7e3); 
 };
-setTimeout(six, 70000);
+setTimeout(six, 70e3);
 
 function seven() {
     const getRandomText = () => letters[Math.floor(Math.random() * letters.length)];
@@ -124,7 +147,7 @@ function seven() {
     changeText(); 
     setInterval(changeText, 2.4e3); 
 };
-setTimeout(seven, 100000);
+setTimeout(seven, 100e3);
 
 function eight() {
     const getRandomText = () => letters[Math.floor(Math.random() * letters.length)];
@@ -133,10 +156,10 @@ function eight() {
     changeText();
     setInterval(changeText, 9.2e3); 
 };
-setTimeout(eight, 130000);
+setTimeout(eight, 130e3);
 
-
-var objects = [ // make variable, use global variables to call the string and replace indiviual timed-out functions
+//begin boots functions
+var objects = [ 
 "boots",
 "catapult",
 "nails",
@@ -176,7 +199,7 @@ function tailDecay() {
     changeText(); 
     setInterval(changeText, 6.3e3); 
 };
-setTimeout(tailDecay, 12000);
+setTimeout(tailDecay, 12e3);
 
 
 function carDecay() {
@@ -186,7 +209,7 @@ function carDecay() {
     changeText(); 
     setInterval(changeText, 3.6e3); 
 };
-setTimeout(carDecay, 34000);
+setTimeout(carDecay, 34e3);
 
 function pileDecay() {
     const getRandomText = () => objects[Math.floor(Math.random() * objects.length)];
@@ -195,7 +218,7 @@ function pileDecay() {
     changeText(); 
     setInterval(changeText, 8e3); 
 };
-setTimeout(pileDecay, 47000);
+setTimeout(pileDecay, 47e3);
 
 function bumperDecay() {
     const getRandomText = () => objects[Math.floor(Math.random() * objects.length)];
@@ -204,7 +227,7 @@ function bumperDecay() {
     changeText(); 
     setInterval(changeText, 4e3); 
 };
-setTimeout(bumperDecay, 62000);
+setTimeout(bumperDecay, 62e3);
 
 function houseDecay() {
     const getRandomText = () => objects[Math.floor(Math.random() * objects.length)];
@@ -213,7 +236,7 @@ function houseDecay() {
     changeText(); 
     setInterval(changeText, 6.1e3); 
 };
-setTimeout(houseDecay, 79000);
+setTimeout(houseDecay, 79e3);
 
 function horsehairDecay() {
     const getRandomText = () => objects[Math.floor(Math.random() * objects.length)];
@@ -222,7 +245,7 @@ function horsehairDecay() {
     changeText(); 
     setInterval(changeText, 7.8e3); 
 };
-setTimeout(horsehairDecay, 94000);
+setTimeout(horsehairDecay, 94e3);
 
 function bootsDecay() {
     const getRandomText = () => objects[Math.floor(Math.random() * objects.length)];
@@ -231,7 +254,7 @@ function bootsDecay() {
     changeText(); 
     setInterval(changeText, 11.2e3); 
 };
-setTimeout(bootsDecay, 112000);
+setTimeout(bootsDecay, 112e3);
 
 function waxDecay() {
     const getRandomText = () => objects[Math.floor(Math.random() * objects.length)];
@@ -240,7 +263,7 @@ function waxDecay() {
     changeText(); 
     setInterval(changeText, 8.4e3); 
 };
-setTimeout(waxDecay, 124000);
+setTimeout(waxDecay, 124e3);
 
 function wheelsDecay() {
     const getRandomText = () => objects[Math.floor(Math.random() * objects.length)];
@@ -249,7 +272,7 @@ function wheelsDecay() {
     changeText(); 
     setInterval(changeText, 4.7e3); 
 };
-setTimeout(wheelsDecay, 136000);
+setTimeout(wheelsDecay, 136e3);
 
 function driveDecay() {
     const getRandomText = () => objects[Math.floor(Math.random() * objects.length)];
@@ -258,7 +281,7 @@ function driveDecay() {
     changeText(); 
     setInterval(changeText, 11e3); 
 };
-setTimeout(driveDecay, 141000);
+setTimeout(driveDecay, 141e3);
 
 function hillsDecay() {
     const getRandomText = () => objects[Math.floor(Math.random() * objects.length)];
@@ -267,7 +290,7 @@ function hillsDecay() {
     changeText(); 
     setInterval(changeText, 5.6e3); 
 };
-setTimeout(hillsDecay, 159000);
+setTimeout(hillsDecay, 159e3);
 
 function dirtDecay() {
     const getRandomText = () => objects[Math.floor(Math.random() * objects.length)];
@@ -276,7 +299,7 @@ function dirtDecay() {
     changeText(); 
     setInterval(changeText, 5.9e3); 
 };
-setTimeout(dirtDecay, 168000);
+setTimeout(dirtDecay, 168e3);
 
 // begin positon word list and functions
 var positions = [
@@ -300,7 +323,7 @@ function leftDecay() {
     changeText(); 
     setInterval(changeText, 13.2e3); 
 };
-setTimeout(leftDecay, 15000);
+setTimeout(leftDecay, 15e3);
 
 function behindDecay() {
     const getRandomText = () => positions[Math.floor(Math.random() * positions.length)];
@@ -309,7 +332,7 @@ function behindDecay() {
     changeText(); 
     setInterval(changeText, 11.1e3); 
 };
-setTimeout(behindDecay, 23000);
+setTimeout(behindDecay, 23e3);
 
 function upDecay() {
     const getRandomText = () => positions[Math.floor(Math.random() * positions.length)];
@@ -318,7 +341,7 @@ function upDecay() {
     changeText(); 
     setInterval(changeText, 10.5e3); 
 };
-setTimeout(upDecay, 36000);
+setTimeout(upDecay, 36e3);
 
 function stuckDecay() {
     const getRandomText = () => positions[Math.floor(Math.random() * positions.length)];
@@ -327,7 +350,7 @@ function stuckDecay() {
     changeText(); 
     setInterval(changeText, 10.4e3); 
 };
-setTimeout(stuckDecay, 49000);
+setTimeout(stuckDecay, 49e3);
 
 function behindtwoDecay() {
     const getRandomText = () => positions[Math.floor(Math.random() * positions.length)];
@@ -336,7 +359,7 @@ function behindtwoDecay() {
     changeText(); 
     setInterval(changeText, 9.7e3); 
 };
-setTimeout(behindtwoDecay, 79000);
+setTimeout(behindtwoDecay, 79e3);
 
 function inDecay() {
     const getRandomText = () => positions[Math.floor(Math.random() * positions.length)];
@@ -345,7 +368,7 @@ function inDecay() {
     changeText(); 
     setInterval(changeText, 6.2e3); 
 };
-setTimeout(inDecay, 112000);
+setTimeout(inDecay, 112e3);
 
 function farDecay() {
     const getRandomText = () => positions[Math.floor(Math.random() * positions.length)];
@@ -354,7 +377,7 @@ function farDecay() {
     changeText(); 
     setInterval(changeText, 4.3e3); 
 };
-setTimeout(farDecay, 137000);
+setTimeout(farDecay, 137e3);
 
 var descriptions = [
     "fluid",
@@ -379,7 +402,7 @@ function fartwoDecay() {
     changeText(); 
     setInterval(changeText, 11e3); 
 };
-setTimeout(fartwoDecay, 17000);
+setTimeout(fartwoDecay, 17e3);
 
 function tenDecay() {
     const getRandomText = () => descriptions[Math.floor(Math.random() * descriptions.length)];
@@ -388,7 +411,7 @@ function tenDecay() {
     changeText(); 
     setInterval(changeText, 10.7e3); 
 };
-setTimeout(tenDecay, 29000);
+setTimeout(tenDecay, 29e3);
 
 function rawDecay() {
     const getRandomText = () => descriptions[Math.floor(Math.random() * descriptions.length)];
@@ -397,7 +420,7 @@ function rawDecay() {
     changeText(); 
     setInterval(changeText, 9.8e3); 
 };
-setTimeout(rawDecay, 56000);
+setTimeout(rawDecay, 56e3);
 
 function recordDecay() {
     const getRandomText = () => descriptions[Math.floor(Math.random() * descriptions.length)];
@@ -406,7 +429,7 @@ function recordDecay() {
     changeText(); 
     setInterval(changeText, 8.4e3); 
 };
-setTimeout(recordDecay, 77000);
+setTimeout(recordDecay, 77e3);
 
 function softDecay() {
     const getRandomText = () => descriptions[Math.floor(Math.random() * descriptions.length)];
@@ -415,7 +438,7 @@ function softDecay() {
     changeText(); 
     setInterval(changeText, 5.7e3); 
 };
-setTimeout(softDecay, 94000);
+setTimeout(softDecay, 94e3);
 
 function hardDecay() {
     const getRandomText = () => descriptions[Math.floor(Math.random() * descriptions.length)];
@@ -424,7 +447,7 @@ function hardDecay() {
     changeText(); 
     setInterval(changeText, 7.1e3); 
 };
-setTimeout(hardDecay, 107000);
+setTimeout(hardDecay, 107e3);
 
 function coveredDecay() {
     const getRandomText = () => descriptions[Math.floor(Math.random() * descriptions.length)];
@@ -433,7 +456,7 @@ function coveredDecay() {
     changeText(); 
     setInterval(changeText, 7.7e3); 
 };
-setTimeout(coveredDecay, 126000);
+setTimeout(coveredDecay, 126e3);
 
 function behindthreeDecay() {
     const getRandomText = () => descriptions[Math.floor(Math.random() * descriptions.length)];
@@ -442,7 +465,7 @@ function behindthreeDecay() {
     changeText(); 
     setInterval(changeText, 7.8e3); 
 };
-setTimeout(behindthreeDecay, 145000);
+setTimeout(behindthreeDecay, 145e3);
 
 function noDecay() {
     const getRandomText = () => descriptions[Math.floor(Math.random() * descriptions.length)];
@@ -451,7 +474,7 @@ function noDecay() {
     changeText(); 
     setInterval(changeText, 7.9e3); 
 };
-setTimeout(noDecay, 168000);
+setTimeout(noDecay, 168e3);
 
 var actions = [
     "swept",
@@ -479,7 +502,7 @@ function beDecay() {
     changeText(); 
     setInterval(changeText, 6.8e3); 
 };
-setTimeout(beDecay, 11000);
+setTimeout(beDecay, 11e3);
 
 function chaseDecay() {
     const getRandomText = () => actions[Math.floor(Math.random() * actions.length)];
@@ -488,7 +511,7 @@ function chaseDecay() {
     changeText(); 
     setInterval(changeText, 6.9e3); 
 };
-setTimeout(chaseDecay, 29000);
+setTimeout(chaseDecay, 29e3);
 
 function reachDecay() {
     const getRandomText = () => actions[Math.floor(Math.random() * actions.length)];
@@ -497,7 +520,7 @@ function reachDecay() {
     changeText(); 
     setInterval(changeText, 4.2e3); 
 };
-setTimeout(reachDecay, 37000);
+setTimeout(reachDecay, 37e3);
 
 function madeDecay() {
     const getRandomText = () => actions[Math.floor(Math.random() * actions.length)];
@@ -506,7 +529,7 @@ function madeDecay() {
     changeText(); 
     setInterval(changeText, 7.1e3); 
 };
-setTimeout(madeDecay, 49000);
+setTimeout(madeDecay, 49e3);
 
 function drivetwoDecay() {
     const getRandomText = () => actions[Math.floor(Math.random() * actions.length)];
@@ -515,7 +538,7 @@ function drivetwoDecay() {
     changeText(); 
     setInterval(changeText, 3.6e3); 
 };
-setTimeout(drivetwoDecay, 56000);
+setTimeout(drivetwoDecay, 56e3);
 
 function sewnDecay() {
     const getRandomText = () => actions[Math.floor(Math.random() * actions.length)];
@@ -524,7 +547,7 @@ function sewnDecay() {
     changeText(); 
     setInterval(changeText, 5.4e3); 
 };
-setTimeout(sewnDecay, 64000);
+setTimeout(sewnDecay, 64e3);
 
 function drivethreeDecay() {
     const getRandomText = () => actions[Math.floor(Math.random() * actions.length)];
@@ -533,7 +556,7 @@ function drivethreeDecay() {
     changeText(); 
     setInterval(changeText, 3.2e3); 
 };
-setTimeout(drivethreeDecay, 71000);
+setTimeout(drivethreeDecay, 71e3);
 
 function sosDecay() {
     const getRandomText = () => actions[Math.floor(Math.random() * actions.length)];
@@ -542,7 +565,7 @@ function sosDecay() {
     changeText(); 
     setInterval(changeText, 7.4e3); 
 };
-setTimeout(sosDecay, 90000);
+setTimeout(sosDecay, 90e3);
 
 function cavingDecay() {
     const getRandomText = () => actions[Math.floor(Math.random() * actions.length)];
@@ -551,7 +574,7 @@ function cavingDecay() {
     changeText(); 
     setInterval(changeText, 7.1e3); 
 };
-setTimeout(cavingDecay, 113000);
+setTimeout(cavingDecay, 113e3);
 
 function callDecay() {
     const getRandomText = () => actions[Math.floor(Math.random() * actions.length)];
@@ -560,7 +583,7 @@ function callDecay() {
     changeText(); 
     setInterval(changeText, 7.5e3); 
 };
-setTimeout(callDecay, 121000);
+setTimeout(callDecay, 121e3);
 
 function upgradeDecay() {
     const getRandomText = () => actions[Math.floor(Math.random() * actions.length)];
@@ -569,7 +592,7 @@ function upgradeDecay() {
     changeText(); 
     setInterval(changeText, 6.1e3); 
 };
-setTimeout(upgradeDecay, 145000);
+setTimeout(upgradeDecay, 145e3);
 
 var persons = [
     "I",
@@ -585,7 +608,7 @@ function ioneDecay() {
     changeText(); 
     setInterval(changeText, 10e3); 
 };
-setTimeout(ioneDecay, 50505);
+setTimeout(ioneDecay, 50e3);
 
 function itwoDecay() {
     const getRandomText = () => persons[Math.floor(Math.random() * persons.length)];
@@ -594,7 +617,7 @@ function itwoDecay() {
     changeText(); 
     setInterval(changeText, 10e3); 
 };
-setTimeout(itwoDecay, 73505);
+setTimeout(itwoDecay, 73e3);
 
 function ithreeDecay() {
     const getRandomText = () => persons[Math.floor(Math.random() * persons.length)];
@@ -603,7 +626,7 @@ function ithreeDecay() {
     changeText(); 
     setInterval(changeText, 10e3); 
 };
-setTimeout(ithreeDecay, 94505);
+setTimeout(ithreeDecay, 94e3);
 
 
 function ifourDecay() {
@@ -613,7 +636,7 @@ function ifourDecay() {
     changeText(); 
     setInterval(changeText, 10e3); 
 };
-setTimeout(ifourDecay, 116505);
+setTimeout(ifourDecay, 116e3);
 
 
 function ifiveDecay() {
@@ -623,7 +646,7 @@ function ifiveDecay() {
     changeText(); 
     setInterval(changeText, 10e3); 
 };
-setTimeout(ifiveDecay, 134505);
+setTimeout(ifiveDecay, 134e3);
 
 
 function isixDecay() {
@@ -633,7 +656,7 @@ function isixDecay() {
     changeText(); 
     setInterval(changeText, 10e3); 
 };
-setTimeout(isixDecay, 156505);
+setTimeout(isixDecay, 156e3);
 
 function itwoDecay() {
     const getRandomText = () => persons[Math.floor(Math.random() * persons.length)];
@@ -642,4 +665,4 @@ function itwoDecay() {
     changeText(); 
     setInterval(changeText, 10e3); 
 };
-setTimeout(itwoDecay, 170505);
+setTimeout(itwoDecay, 170e3);

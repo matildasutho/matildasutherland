@@ -21,20 +21,22 @@
         <span id="five">s</span><span id="six">t</span><span id="seven">y</span><span id="eight">l</span><span id="nine">e</span>
     </div>
     <div id="toggle-wrap"> <!--containing the buttons to easily move them around the page-->
-        <button id="audio-toggle">audio <a id="audio-on" onclick="playAudio()">on</a> | <a id="audio-off" onclick="pauseAudio()">off</a></button> <!--will contain a toggle for the audio track on and off. Will display play state as well (i.e. audio on/off)-->
-        <button id="info-toggle">info</button> <!--called by the popup.js to allow toggle popup-->
+        <button id="audio-toggle">audio <a id="audio-on" onclick="playAudio()">on</a> | <a id="audio-off" onclick="pauseAudio()">off</a></button> <!--will contain a toggle for the audio track on and off. 
+                                                                                                                                                        Will display play state as well (i.e. audio on/off)-->
+        <button id="info-toggle">info</button> <!--calls the function in popup.js to increase the z-index and "hidden" class from the popup element-->
     </div>
-    <audio id="webpage_audio" src="dirtstyle_webpage_audio.mp3"></audio>
+    <audio id="webpage_audio" src="dirtstyle_webpage_audio.mp3"></audio> <!--the audio in question, toggling play/pause via JS event listeners-->
 </header>
 
 
-
-<div id="outer-wrap">
-<div class="container">
-        <span class="person" id="ione">I</span>
-        <span class="else">wanna</span>
+<!--begin poem-->
+<div id="outer-wrap"> <!--outer wrapper, in case i needed to style the poem within the body-->
+<div class="container"><!--this wrap has the break-word overflow applied, isn't usally used in the browser, but allows it to be viewed as a 'concrete' poem on the mobile-->
+        <span class="person" id="ione">I</span><!--you can see I've organised different words into six types of text based on the word class. This allows me to apply stylings to groups of words-->
+        <span class="else">wanna</span> <!--these 'else' words only have a class as they are not being run through the JS function to change words-->
         <span class="action" id="be">be</span>
-        <span class="position" id="left">left</span>
+        <span class="position" id="left">left</span><!--the position, describe, action, persona and object elements have an individual id tag as well. This allows me to add the JS function which selects a new word from the 
+        corresponding string for its word class. I've then used the individual id to time each element's transitions-->
         <span class="position" id="behind">behind</span>
 
         <span class="person" id="itwo">I</span>
@@ -45,7 +47,7 @@
         <span class="else">my</span>
         <span class="object" id="tail">tail</span>
 </div>
-<div class="container">
+<div class="container"> <!--using multiple containers to separate each line of the poem-->
         <span class="person" id="ithree">I</span>
         <span class="else">wanna be so </span>
         <span class="position" id="sofar">far behind</span>
@@ -148,21 +150,22 @@
         <span class="action" id="upgrade">upgrade</span>
 </div>
 </div>
-
-<div id="info-popup" class="hidden">
+<!--the info popup-->
+<div id="info-popup" class="hidden"> <!--the hidden class which is removed in the JS function to reveal and hide the popup-->
     <div>
-      <div id="x">X</div>
-      <div class="wrapper">
+      <div id="x">X</div> <!--this element is used to close the popup, through decreasing the zindex and adding the hidden class back to the popup element-->
+      <div class="wrapper"><!--to add padding to the text within the popup container.-->
         <span class="action">I'm going pastoral.</span><span class="person">Not in the Shakespearean sense, in the sense that</span><span class="describe"> I don't want to upgrade.<span class="else"> I want to be left behind.</span>
-        <br>
+        <br><!--separate the lines above into different classes, to provide interest in teh CSS nad reflect the styling of the page itself.-->
         <br>
         <I>Dirtstyle</I> is intended as a single page net.art piece to be viewed by 
         the user as the text ‘decays’ before their eyes. This code is heavily inspired 
-        by Daniel Temkin's esoteric language 'Entropy' - though it is a pared back emulation.
+        by Daniel Temkin's esoteric language 'Entropy' - though it is a pared back emulation.<!--the ideas behind the project heavily influneced by Daniel Temkin's original
+        esolang, so have included a reference to him for anybody curious about creative coding who would like to explore esolangs further-->
       </div>
     </div>
   </div>
-    <script src="js/script.js"></script>
-    <script src="js/popup.js"></script>
+    <script src="js/script.js"></script><!--calling the script with the "decay" functions for the word classes and the header, it also contains the audio toggle event listeners
+and the popup function-->
 </body>
 </html>
