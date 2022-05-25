@@ -1,6 +1,7 @@
 body {
     background-color: blue;
     color: white;
+
 }
 #spiral-wrapper {
     width: 80vw;
@@ -8,8 +9,7 @@ body {
     text-align: center;
     position: relative;
     cursor: progress;
-    transform: skewX(60deg);
-    opacity: 0.7;
+    transform: rotateX(290deg) rotateY(340deg);
 }
 .spiral-fall1 {
     position: absolute;
@@ -17,6 +17,7 @@ body {
     width: 600px;
     height: 600px;
     animation: 200s rotate linear infinite;
+    scrollbar-width: none;
 }
 .spiral-fall2 {
     position: absolute;
@@ -25,6 +26,7 @@ body {
     width: 550px;
     height: 550px;
     animation: 200s rotate reverse infinite;
+    scrollbar-width: none;
 }
 .spiral-fall3 {
     position: absolute;
@@ -33,6 +35,7 @@ body {
     width: 450px;
     height: 450px;
     animation: 200s rotate linear infinite;
+    scrollbar-width: none;
 }
 .spiral-fall4 {
     position: absolute;
@@ -41,6 +44,7 @@ body {
     width: 375px;
     height: 375px;
     animation: 200s rotate linear infinite;
+    scrollbar-width: none;
 }
 .spiral-fall5 {
     position: absolute;
@@ -49,6 +53,7 @@ body {
     width: 300px;
     height: 300px;
     animation: 200s rotate linear infinite;
+    scrollbar-width: none;
 }
 .spiral-fall6 {
     position: absolute;
@@ -57,8 +62,14 @@ body {
     width: 100px;
     height: 100px;
     animation: 200s rotate linear infinite;
+    scrollbar-width: none;
 }
-
+.scrollbar {
+    scrollbar-width: none;
+}
+.scrollbar::-webkit-scrollbar {
+    display: none;
+}
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
