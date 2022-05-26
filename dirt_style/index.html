@@ -16,14 +16,17 @@
 </head>
 <body>
 <header>
-    <div id="header-wrap"> <!--this is where the dirtstyle header is contained. I used this -->
+    <div alt="Dirt Style website title where the letters are changed at random" id="header-wrap"> <!--this is where the dirtstyle header is contained. Alt text here to have it read clearly to those using screen readers -->
         <span id="one">d</span><span id="two">i</span><span id="three">r</span><span id="four">t</span>
         <span id="five">s</span><span id="six">t</span><span id="seven">y</span><span id="eight">l</span><span id="nine">e</span>
     </div>
     <div id="toggle-wrap"> <!--containing the buttons to easily move them around the page-->
-        <button id="audio-toggle">audio <a id="audio-on" onclick="playAudio()">on</a> | <a id="audio-off" onclick="pauseAudio()">off</a></button> <!--will contain a toggle for the audio track on and off. 
-                                                                                                                                                        Will display play state as well (i.e. audio on/off)-->
-        <button id="info-toggle">info</button> <!--calls the function in popup.js to increase the z-index and "hidden" class from the popup element-->
+        <button id="info-toggle">info</button><br><br> <!--calls the function in popup.js to increase the z-index and "hidden" class from the popup element-->
+        audio
+        <button class="audio-toggle"><a id="audio-on" onclick="playAudio()">on</a> </button> |
+        <button class="audio-toggle"><a id="audio-off" onclick="pauseAudio()">off</a></button> <!--will contain a toggle for the audio track on and off. 
+                                                                                                                                                 Will display play state as well (i.e. audio on/off)-->
+        
     </div>
     <audio id="webpage_audio" src="dirtstyle_webpage_audio.mp3"></audio> <!--the audio in question, toggling play/pause via JS event listeners-->
 </header>
@@ -153,7 +156,7 @@
 <!--the info popup-->
 <div id="info-popup" class="hidden"> <!--the hidden class which is removed in the JS function to reveal and hide the popup-->
     <div>
-      <div id="x">X</div> <!--this element is used to close the popup, through decreasing the zindex and adding the hidden class back to the popup element-->
+      <button style="background-color: black; color: white;" id="x">X</button> <!--this button is used to close the popup, through decreasing the zindex and adding the hidden class back to the popup element-->
       <div class="wrapper"><!--to add padding to the text within the popup container.-->
         <span class="action">I'm going pastoral.</span><span class="person">Not in the Shakespearean sense, in the sense that</span><span class="describe"> I don't want to upgrade.<span class="else"> I want to be left behind.</span>
         <br><!--separate the lines above into different classes, to provide interest in teh CSS nad reflect the styling of the page itself.-->

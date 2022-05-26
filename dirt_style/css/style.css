@@ -31,6 +31,8 @@ button { /*button styling*/
     z-index: 10; /*aloows the button so sit at the top through the z-index. Using the fixed posiiton means that th ebuttons will always be visible even when the userr resizes their browser window*/
     top: 20px;
     right: 20px;
+    text-align: right;
+    font-size: 0.8em;
 }
 .container {
     width: 100vw;
