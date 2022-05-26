@@ -2,7 +2,12 @@
 const webPageAudio = document.getElementById("webpage_audio"); //get the audio player
 const audioOn = document.getElementById("audio-on"); //get the on toggle
 const audioOff = document.getElementById("audio-off"); //get the off toggle
-const keyControl = document.getElementsByTagName("button"); //get all button elements on the page
+var keyControl = document.getElementsByTagName("button"); //get all button elements on the page
+const info = document.getElementById("info-toggle");//get the info-toggle button
+const popup = document.getElementById("info-popup");//get the popup itself
+const x = document.getElementById("x");//get the X to close the popup
+
+
 
 function playAudio() { /*this function is called by the audio-on toggle using an onclick event listener*/
   webPageAudio.play(); /*standard function for playing audio*/
@@ -17,9 +22,7 @@ function pauseAudio() { /*this function is called by the audio-off toggle using 
 }; 
 
 //popup function
-const info = document.getElementById("info-toggle");//get the info-toggle button
-const popup = document.getElementById("info-popup");//get the popup itself
-const x = document.getElementById("x");//get the X to close the popup
+
 
 //click event listener allows the user to click on the info-toggle button to view the info
 info.addEventListener("click", () => {
@@ -33,18 +36,7 @@ x.addEventListener("click", () => {
   popup.style.zIndex = "-10"; /*a safeguard for hiding the popup fully behind other elements*/
 });
 
-//this script allows the user to click buttons using the enter key
-keyControl.addEventListener("keypress", 
-function(event) {
-    if (event.key === "Enter") {
-        event.preventDefault();
-        
-    audioOn.click();
-    audioOff.click();
-    info.click();
-    x.click();
-    }
-});
+
 
 
 //this is the script for the header

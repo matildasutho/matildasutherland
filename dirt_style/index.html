@@ -23,8 +23,8 @@
     <div id="toggle-wrap"> <!--containing the buttons to easily move them around the page-->
         <button id="info-toggle">info</button><br><br> <!--calls the function in popup.js to increase the z-index and "hidden" class from the popup element-->
         audio
-        <button class="audio-toggle"><a id="audio-on" onclick="playAudio()">on</a> </button> |
-        <button class="audio-toggle"><a id="audio-off" onclick="pauseAudio()">off</a></button> <!--will contain a toggle for the audio track on and off. 
+        <a id="audio-on" onclick="playAudio()"><button class="audio-toggle">on</button></a> |
+        <a id="audio-off" onclick="pauseAudio()"><button class="audio-toggle">off</button></a> <!--will contain a toggle for the audio track on and off. 
                                                                                                                                                  Will display play state as well (i.e. audio on/off)-->
         
     </div>
@@ -168,7 +168,22 @@
       </div>
     </div>
   </div>
+
     <script src="js/script.js"></script><!--calling the script with the "decay" functions for the word classes and the header, it also contains the audio toggle event listeners
 and the popup function-->
+<script>
+//this script allows the user to click buttons using the enter key, fo rsome reason I had to include it here otherwise it 
+//caused the decay functions to error
+keyControl.addEventListener("keypress", function(event) {
+    if (event.key === "event") {
+        enter.preventDefault();
+        
+    audioOn.click();
+    audioOff.click();
+    info.click();
+    x.click();
+    }
+});
+</script>
 </body>
 </html>
