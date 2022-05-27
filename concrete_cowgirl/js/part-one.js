@@ -142,20 +142,16 @@ pageTurn.addEventListener("click", () => {
     fillPage.style.animation = "4s lacesturner linear";
     setTimeout(function() {
       blackEnter.style.animation = "4s lacesturner linear";
-      blackEnter.style.zIndex = "4"
-      fillPage.style.animation = "4s jungleturner linear";
-      page.style.left = "-100%";
+      blackEnter.style.zIndex = "20"
+      fillPage.style.left = "0%";
     }, 4000)  
-    setTimeout(function() {
-      blackEnter.style.left = "0%";
-    }, 8000);
     setTimeout(function() {
       cowgirlCall.className = "";
       cowgirlCall.style.animation = "3s regFade linear";
       cowgirlCall.style.zIndex = "5";
       oneCowgirl.className = "";
-    }, 27000);
-})
+    }, 6000);
+});
 
 const twoCowgirl = document.getElementById("two-cowgirls");
 const threeCowgirl = document.getElementById("three-cowgirls");

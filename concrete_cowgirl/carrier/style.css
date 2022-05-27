@@ -6,6 +6,9 @@
     margin: 0;
     overflow-y: scroll;
 }
+*::-webkit-scrollbar {
+    display: none;
+}
 body {
     background-color: rgb(0, 0, 0);
     color: white;
@@ -13,6 +16,21 @@ body {
 }
 h1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.text1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.text2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.text3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.text4 {
+    font-family: fantasy;
+}
+.text5 {
+    font-family: Geneva, sans-serif;
 }
 .scrollbar {
     scrollbar-width: none;
@@ -43,7 +61,7 @@ h1 {
 #link-to-ride pre {
     color: red;
     font-size: 8em;
-    animation: 1s fadein ease-in-out;
+    animation: 44s fadein ease-in-out;
     text-shadow: 2px 2px 8px red, 2px 10px 40px red, -5px -10px 50px red;
 
 }
@@ -76,8 +94,13 @@ span:hover {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: black;
+    background-color: white;
+    color: black;
     z-index: 0;
+}
+nav
+ul {
+    height: fit-content;
 }
 #hat {
     position: absolute;
@@ -88,8 +111,6 @@ span:hover {
     height: 100px;
     width: 100px;
     cursor: pointer;
-
-
 }
 #gray_hat:hover {
     height: 90px;
@@ -128,7 +149,9 @@ span:hover {
 #rising-moon {
     cursor: pointer;
 }
-
+#moon {
+    animation: 80s scrolltext linear;
+}
 /*BREAKFAST*/
 #breakfast-wrap {
     width: 100vw;
@@ -147,37 +170,6 @@ span:hover {
     text-align: center;
     padding-top: 5%;
 }
-/*#coffee {
-    padding-bottom: 16vh;
-    padding-left: 4vw;
-    padding-top: 2vh;
-    text-align: left;
-    animation: 3s fadein linear;
-}
-#poems {
-    padding-bottom: 16vh;
-    padding-right: 4vw;
-    text-align: right;
-    animation: 6s fadein linear;
-}
-#glitch {
-    padding-bottom: 16vh;
-    padding-left: 4vw;
-    text-align: left;
-    animation: 10s fadein linear;
-}
-#crunchy {
-    padding-bottom: 16vh;
-    padding-right: 4vw;
-    text-align: right;
-    animation: 16s  linear;
-}
-#chip {
-    padding-left: 4vw;
-    padding-bottom: 5vh;
-    text-align: left;
-    animation: 20s fadein linear;
-}*/
 #stars {
     position: absolute;
 
@@ -186,6 +178,12 @@ span:hover {
     z-index: -15;
     top: 0;
     left: 0;
+}
+.inline {
+    display: inline;
+    height: 20px;
+    position: inherit;
+    color: rgba(255, 255, 255, 0.4);
 }
 .smaller-popup {
     cursor: pointer;
@@ -315,6 +313,7 @@ opacity: 0.6;
   padding-left: 5px;
   height: 150vh;
   font-size: 10px;
+
 }
 #eight-one,
 #eight-two, 
@@ -322,7 +321,6 @@ opacity: 0.6;
 #eight-four,
 #eight-five {
     height: 2.1em;
-
 }
 #irl-fall {
     font-family: 'Courier New', Courier, monospace;
@@ -359,7 +357,32 @@ opacity: 0.6;
     border: none;
     scrollbar-width: none;
 }
-
+#spiral {
+    animation: rotate 4s linear infinite;
+    text-decoration: none;
+    border: none;
+    scrollbar-width: none;
+}
+#spiral-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    scrollbar-width: none;
+}
+#spiral2 {
+    animation: rotate 4s linear infinite;
+    text-decoration: none;
+    border: none;
+    scrollbar-width: none;
+}
+#spiral-wrap2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    scrollbar-width: none;
+}
 /*nomxnsland*/
 .fade-in {
     animation: 6s regFade linear;
@@ -470,7 +493,7 @@ opacity: 0.6;
     height: 100vh;
     position: absolute;
     top: 0px;
-    z-index: -100;
+    z-index: 10;
     background-color: rgb(45, 105, 45);
     
 }
@@ -1049,14 +1072,6 @@ a:hover{
         opacity: 0;
         
     }
-    50% {
-        opacity: 0.5;
-        
-    }
-    80% {
-        opacity: 0.8;
-      
-    }
     100% {
         opacity: 1;
     
@@ -1067,14 +1082,7 @@ a:hover{
         opacity: 0;
       
     }
-    50% {
-        opacity: 0.5;
-      
-    }
-    80% {
-        opacity: 0.8;
-      
-    }
+
     100% {
         opacity: 1;
 
@@ -1084,14 +1092,6 @@ a:hover{
     0% {
         opacity: 0;
 
-    }
-    50% {
-        opacity: 0.5;
-      
-    }
-    80% {
-        opacity: 0.8;
-      
     }
     100% {
         opacity: 1;

@@ -5,7 +5,7 @@ let funcArr = [
         window.open("corral.html", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=-200,right=0,width=300,height=200");
         window.open("grey.html", "_blank", "toolbar=no,scrollbars=no,resizable=yes,top=500,left=1200,width=700,height=400");
         window.open("whip.html", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=-200,left=600,width=400,height=300");
-        window.open("part-4.html", "_blank", "toolbar=no,scrollbars=no,resizable=yes,top=-200,left=400,width=200,height=600");
+        window.open("part-four.html", "_blank", "toolbar=no,scrollbars=no,resizable=yes,top=-200,left=400,width=200,height=600");
         window.open("https://www.youtube.com/watch?v=_JtAlxRsqG0&ab_channel=1000Riffs", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=200,left=900,width=400,height=300");
         window.open("water.html", "_blank", "toolbar=no,scrollbars=no,resizable=yes,top=100,left=1200,width=300,height=600");
         window.open("circle.html", "_blank", "toolbar=no,scrollbars=no,resizable=yes,top=300,right=0,width=250,height=250");

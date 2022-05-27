@@ -118,12 +118,12 @@ const eyesOpen = document.getElementById("eyes-open");
 const eyesShut = document.getElementById("eyes-shut");
 
 line.addEventListener("click", () => {
-    line.style.animation = "5s fadeOut linear";
-    the.style.animation = "5s fadeOut linear";
-    along.style.animation = "5s fadeOut linear";
-    down.style.animation = "5s fadeOut linear";
-    tread.style.animation = "5s fadeOut linear";
-    vest.style.animation = "5s fadeOut linear";
+    line.style.animation = "2s fadeOut linear";
+    the.style.animation = "2s fadeOut linear";
+    along.style.animation = "2s fadeOut linear";
+    down.style.animation = "2s fadeOut linear";
+    tread.style.animation = "2s fadeOut linear";
+    vest.style.animation = "2s fadeOut linear";
     orb.style.top = "0";
     orb.style.left = "0";
     orb.style.width = "100vw";
@@ -137,18 +137,18 @@ line.addEventListener("click", () => {
     down.className = "hidden";
     tread.className = "hidden";
     vest.className = "hidden";
-    }, 4998);
+    }, 1998);
     setTimeout(() => {
     eyes.className = "";
-    }, 5000);
+    }, 7000);
     setTimeout(() => {
     eyesOpen.className = "";
     eyesShut.className = "hidden";
-    }, 5400);
+    }, 7500);
     setTimeout(() => {
     eyesShut.className = "";
     eyesOpen.className = "hidden";
-    }, 5800);
+    }, 7750);
 
 });
 

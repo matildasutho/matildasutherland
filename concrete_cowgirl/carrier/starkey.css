@@ -6,6 +6,9 @@ body {
     background-color: rgb(73, 23, 0);
 
 }
+.fade-in {
+    animation: 6s regFade linear;
+}
 #dirt {
     color: rgb(85, 54, 25);
     height: 50vh;
@@ -31,6 +34,7 @@ body {
     overflow: hidden;
     background-image: radial-gradient(rgb(0, 253, 160), rgb(193, 19, 193), rgb(179, 255, 3));
     box-shadow: 3px 3px 30px rgb(179, 255, 3);
+    cursor: pointer;
 }
 
 #starkey {
@@ -228,6 +232,7 @@ img {
 #eyes-shut {
     padding: 32vh 17vw;
     opacity: 0.9;
+    cursor: pointer;
 }
 @media only screen and (max-width: 400px){
     #eyes-open,
@@ -311,5 +316,37 @@ img {
         -moz-border-radius: 90px / 90px;
     -webkit-border-radius: 90px / 90px;
     border-radius: 90px / 90px;
+    }
+}
+
+@keyframes regFade {
+    0% {
+        opacity: 0;
+        
+    }
+    100% {
+        opacity: 1;
+    
+    }
+}
+@-moz-keyframes regFade {
+    0% {
+        opacity: 0;
+      
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+}
+@-webkit-keyframes regFade {
+    0% {
+        opacity: 0;
+
+    }
+    100% {
+        opacity: 1;
+
     }
 }

@@ -1,24 +1,9 @@
-const bones = document.getElementById("mxn-bones");
-const mxnPoems = document.getElementById("mxn-poems");
-const mxnSteps = document.getElementById("mxn-steps");
-const nextMoonWrap = document.getElementById("nextMoon-wrap");
-const centeredMoon = document.getElementById("centered-moon");
 const spiral = document.getElementById("spiral");
 const spiralWrap = document.getElementById("spiral-wrap");
+const spiralTwo = document.getElementById("spiral2");
+const spiralWrapTwo = document.getElementById("spiral-wrap2");
 const graveWrap = document.getElementById("grave-wrap");
 const graveYard = document.getElementById("graveyard");
-
-
-bones.addEventListener("click", () => {
-    graveWrap.className = "";
-    graveWrap.style.zIndex = "10";
-    graveWrap.style.animation = "5s regFade linear";
-    setTimeout(() => {
-        spiralWrap.style.animation = "5s regFade linear";
-        spiralWrap.className = "";
-        spiralWrap.style.zIndex = "15";
-    }, 5000);
-});
 
 const ssdOne = document.getElementById("ssd-one");
 const ssdTwo = document.getElementById("ssd-two");
@@ -36,7 +21,6 @@ const longDrive = document.getElementById("long-drive");
 const softDrive = document.getElementById("soft-drive");
 const hardDrive = document.getElementById("hard-drive");
 const laces = document.getElementById("laces-wrapper");
-const hiddenGraves = document.getElementById("hidden-graves");
 
 spiralWrap.addEventListener("click", () => {
     graveYard.style.animation = "40s gradientScroll linear";
@@ -56,6 +40,8 @@ spiralWrap.addEventListener("click", () => {
         ssdThree.style.position = "fixed";
         ssdThree.style.top = "30vh";
         ssdThree.style.left = "25vw";
+        longDrive.className = "";
+        longDrive.style.animation = "5s regFade linear";
     }, 5500);
     setTimeout(() => {
         ssdEight.style.position = "fixed";
@@ -89,20 +75,10 @@ spiralWrap.addEventListener("click", () => {
         ssdNine.style.left = "43vw";
         ssdWrap.style.width = "100vw";
         ssdWrap.style.textAlign = "center";
-        longDrive.className = "";
-        longDrive.style.animation = "4s regFade linear";
-    }, 7800);
-    setTimeout(() => {
-
-    }, 8500);
-    setTimeout(() => {
-        
-    }, 9000);
-
+    }, 7500);
     setTimeout(() => {
         ssdWrap.style.animation = "4s regFadeOut linear";
-        driveWrap.style.zIndex = "30";
-        
+        driveWrap.style.zIndex = "30";    
     }, 10500);
     setTimeout(() => {
         ssdWrap.className = "hidden";
@@ -114,7 +90,6 @@ spiralWrap.addEventListener("click", () => {
         longDrive.className = "hidden";
     }, 18500);
     setTimeout(() => {
-
         softDrive.className = "";
         softDrive.style.animation = "4s regFade linear";
     }, 23000);
@@ -141,10 +116,7 @@ spiralWrap.addEventListener("click", () => {
         hardDrive.className = "hidden";
     }, 40000);
     setTimeout(() => {
-        hiddenGraves.style.animation = "3s regFadeOut linear";
-    }, 54000);
-    setTimeout(() => {
-        hiddenGraves.className = "hidden";
-        hiddenGraves.style.zIndex = "-200";
-    }, 57000);
+        spiralWrapTwo.className = "";
+        spiralWrapTwo.style.animation = "3s fadein linear";
+    }, 42000);
 });
