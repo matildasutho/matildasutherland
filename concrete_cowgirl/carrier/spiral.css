@@ -71,6 +71,9 @@ body {
 .scrollbar::-webkit-scrollbar {
     display: none;
 }
+.fade-in {
+    animation: 6s regFade linear;
+}
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
@@ -86,5 +89,36 @@ body {
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+@keyframes regFade {
+    0% {
+        opacity: 0;
+        
+    }
+    100% {
+        opacity: 1;
+    
+    }
+}
+@-moz-keyframes regFade {
+    0% {
+        opacity: 0;
+      
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+}
+@-webkit-keyframes regFade {
+    0% {
+        opacity: 0;
+
+    }
+    100% {
+        opacity: 1;
+
     }
 }

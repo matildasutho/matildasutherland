@@ -135,22 +135,30 @@ const page = document.getElementById("jungle");
 const black = document.getElementById("black");
 const cowgirlCall = document.getElementById("cowgirl-call");
 const oneCowgirl = document.getElementById("one-cowgirl");
+const windowsWrap = document.getElementById("windows-wrap");
+const moonLight = document.getElementById("moon-light");
 
 
 pageTurn.addEventListener("click", () => {
     page.style.animation = "4s jungleturner linear";
     fillPage.style.animation = "4s lacesturner linear";
+    windowsWrap.className = "hidden";
+    moonLight.className = "hidden";
     setTimeout(function() {
       blackEnter.style.animation = "4s lacesturner linear";
-      blackEnter.style.zIndex = "20"
-      fillPage.style.left = "0%";
-    }, 4000)  
-    setTimeout(function() {
-      cowgirlCall.className = "";
-      cowgirlCall.style.animation = "3s regFade linear";
-      cowgirlCall.style.zIndex = "5";
-      oneCowgirl.className = "";
-    }, 6000);
+      blackEnter.style.zIndex = "30";
+      fillPage.className = "hidden";
+      page.style.left = "-110%";
+      black.className = "";
+      black.style.zIndex = "35";
+    }, 4000); 
+});
+
+black.addEventListener("click", () => {
+  cowgirlCall.className = "";
+  cowgirlCall.style.animation = "3s regFade linear";
+  cowgirlCall.style.zIndex = "40";
+  oneCowgirl.className = "";
 });
 
 const twoCowgirl = document.getElementById("two-cowgirls");
@@ -170,56 +178,57 @@ const spur = document.getElementById("spur");
 oneCowgirl.addEventListener("click", () => {
     cowgirlCall.style.overflowY = "scroll";
     oneCowgirl.style.textDecoration = "none";
-    oneCowgirl.style.animation = "2s cowgirlUp linear";
+    oneCowgirl.style.animation = "3s cowgirlUp linear";
     cowgirlCall.style.animation = "2s backgroundFade linear";
+    black.className = "hidden";
     setTimeout(() => {
       oneCowgirl.className = "hidden";
       twoCowgirl.className = "";
-      twoCowgirl.style.animation = "1.8s cowgirlUp linear";
+      twoCowgirl.style.animation = "2.8s cowgirlUp linear";
       cowgirlCall.style.backgroundColor = "black";
-    }, 1999);
+    }, 2999);
     setTimeout(() => {
       twoCowgirl.className = "hidden";
       threeCowgirl.className = "";
-      threeCowgirl.style.animation = "1.5s cowgirlUp linear";
-    }, 3790);
+      threeCowgirl.style.animation = "2.5s cowgirlUp linear";
+    }, 5790);
     setTimeout(() => {
       threeCowgirl.className = "hidden";
       fourCowgirl.className = "";
-      fourCowgirl.style.animation = "1.3s cowgirlUp linear";
-    }, 5297);
+      fourCowgirl.style.animation = "2.3s cowgirlUp linear";
+    }, 8297);
     setTimeout(() => {
       fourCowgirl.className = "hidden";
       fiveCowgirl.className = "";
-      fiveCowgirl.style.animation = "1.3s cowgirlUp linear";
-    }, 6596);
+      fiveCowgirl.style.animation = "2.3s cowgirlUp linear";
+    }, 10596);
     setTimeout(() => {
       fiveCowgirl.className = "hidden";
-    }, 7895);
-    setTimeout(() => {
+    }, 12895);
+    /**setTimeout(() => {
       eightOne.className = "";
-    }, 8500);
+    }, 10500);
     setTimeout(() => {
       eightTwo.className = "";
-    }, 8700);
+    }, 10700);
     setTimeout(() => {
       eightThree.className = "";
-    }, 8900);
+    }, 10900);
     setTimeout(() => {
       eightFour.className = "";
-    }, 9100);
+    }, 11100);
     setTimeout(() => {
       eightFive.className = "";
-    }, 9300);
+    }, 11300);
     setTimeout(() => {
       irlFall.style.animation = "3s falling linear";
-    }, 13000);
+    }, 14000);
     setTimeout(() => {
       irlFall.className = "hidden";
-    }, 14500);
+    }, 15500);*/
     setTimeout(() => {
       spurWrap.className = "";
-      spurWrap.style.zIndex = "40";
+      spurWrap.style.zIndex = "50";
       spurWrap.style.animation = "8s regFade linear";
     }, 11200);
 });

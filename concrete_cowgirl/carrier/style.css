@@ -198,7 +198,7 @@ ul {
 }
 #window-outer {
     position: absolute;
-    width: 200px;
+    width: 230px;
     height: 150px;
     font-size: 0.9em;
     border: 1px solid rgba(255, 255, 255, 0.6);
@@ -213,6 +213,7 @@ ul {
     overflow: visible;
     text-shadow: 0px 0px 20px white, -20px 70px 40px white;
     z-index: 0;
+    height: 100vh;
 }
 #jungle p {
     padding: 10px;
@@ -234,6 +235,12 @@ ul {
     right: 1%;
     bottom: 1%;
     opacity: 0.8;
+}
+@media only screen and (max-width:400px) {
+    #moon-light {
+        width: 400px;
+        height: 400px;
+    }
 }
 #pageturn-wrap {
   display: inline-block;
@@ -258,16 +265,23 @@ ul {
 #black-wrapper {
   display: inline-block;
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   z-index: -200;
   background-color: black;
 }
 #black {
-  animation: blackMove 12s steps(14, end) alternate-reverse infinite;
+  animation: blackMove 12s alternate-reverse infinite;
   text-align: justify;
   word-wrap: break-word;
+  color: rgb(80, 80, 79);
+  text-shadow: 2px 2px 30px rgba(255, 255, 255, 0.754);
   padding-left: 1vh;
+  position: absolute;
+  top: 0;
+
 }
 #abs-10 {
 position: absolute;
@@ -280,6 +294,7 @@ opacity: 0.6;
 
 #cowgirl-call {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(255, 255, 255);
   position: absolute;
   background-color: none;
   top: 0;
@@ -413,8 +428,8 @@ opacity: 0.6;
     padding: 20px;
     color: white;
     height: fit-content;
-    width: 30vw;
-    right: 43vw;
+    width: 40vw;
+    right: 40vw;
     position: absolute;
     bottom: 0;
     opacity: 0.7;
@@ -977,13 +992,13 @@ a:hover{
       letter-spacing: 0.2em;
     }
     25% {
-      letter-spacing: 0.3em;
+      letter-spacing: 0.6em;
     }
     50% {
-      letter-spacing: 0.1em;
+      letter-spacing: 0.9em;
     }
     75% {
-      letter-spacing: 0.4em;
+      letter-spacing: 0.5em;
     }
     100% {
       letter-spacing: 0.2em;

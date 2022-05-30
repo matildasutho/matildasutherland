@@ -23,7 +23,7 @@ window.onload = function() {
     btn.onclick = function() {
         funcArr[i++ % funcArr.length](); // first call function and then, increment the value of i
     }
-}
+};
 
 const fireSpur = document.getElementById("fire");
 const ring = document.getElementById("the-ring");
