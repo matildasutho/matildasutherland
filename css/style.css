@@ -15,8 +15,9 @@ body {
     top: -30px; 
     display: flex;
     flex-direction: column;
-    width: fit-content;
-    color: #869183;
+    width: 100%;
+    overflow-x: hidden;
+    color: #374932;
 }
 h1 {
     font-family: freight-display-pro, serif;
@@ -45,14 +46,7 @@ p {
     letter-spacing: 0px;
     line-height: 30px;
 }
-p2 {
-    font-family: freight-display-pro, serif;
-    font-weight: 10;
-    font-style: normal;
-    font-size: 25px;
-    letter-spacing: 0px;
-    line-height: 30px;
-}
+
 .title {
     float: left;
     position: fixed;
@@ -62,7 +56,7 @@ p2 {
     font-size: 35px;
     letter-spacing: 2px;
     padding: 20px 40px;
-    font-family: 'Modak', cursive;
+    font-family: cursive;
 }
 .navbar {
     overflow: hidden;
@@ -73,7 +67,7 @@ p2 {
     top: 0px;
     padding: 0px 40px;
     font-size: 35px;
-    font-family: 'Modak', cursive;
+    font-family: cursive;
 }
   
 .navbar a {
@@ -84,10 +78,10 @@ p2 {
     padding: 20px; 
 }
 a {
-    color: #e6bcf1a1;
+    color: #47362ee2;
 }
 a:hover {
-    color: #faffae;
+    color: #acb078;
 }
 
 iframe {
@@ -111,12 +105,12 @@ footer {
     overflow: hidden;
     position: fixed;
     z-index: 98;
-    width: 100%;
+    width: 100vw;
     left: 0px;
     bottom: 0px;
     padding: 0px 40px;
     font-size: 35px;
-    font-family: 'Modak', cursive;
+    font-family: cursive;
     letter-spacing: 2px;
     
 }
