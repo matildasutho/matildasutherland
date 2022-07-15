@@ -30,6 +30,7 @@ header {
 #banner {
     fill: var(--main);
     margin: 0 auto;
+    max-height: 25vh;
 }
 #title-text {
     height: 30vh;
@@ -38,6 +39,15 @@ header {
     max-height: 30vh;
     fill: var(--main);
 }
+#column-container {
+    display: flex;
+    flex-direction: horizontal;
+}
+.column {
+    margin: 0 auto;
+    width: 40%;
+}
+
 #outline {
     width: 100%;
     position: fixed;
@@ -65,6 +75,9 @@ header {
     fill: var(--text);
     text-align: center;
     padding: 1vh;
+}
+.merch-img {
+    max-width: 250px;
 }
 button {
     width: 230px;
@@ -96,5 +109,17 @@ button:hover {
 @media only screen and (max-width: 400px) {
     #wave {
         opacity: 0;
+    }
+}
+@media only screen and (max-width: 500px) {
+    #column-container {
+        display: block;
+        
+    }
+    .column {
+        width: 90%;
+        padding: 0;
+        margin: 0;
+        text-align: center;
     }
 }
