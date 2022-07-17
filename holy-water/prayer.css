@@ -105,10 +105,17 @@ button:hover {
     left: 2;
     fill: var(--main);
 }
-
+#music-video {
+    width: 400px;
+    height: 260px; 
+}
 @media only screen and (max-width: 400px) {
     #wave {
         opacity: 0;
+    }
+    #music-video {
+        width: 280px;
+        height: 160px;
     }
 }
 @media only screen and (max-width: 500px) {
