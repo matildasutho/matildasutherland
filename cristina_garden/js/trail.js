@@ -28,11 +28,18 @@
     s.style.position = "absolute";
     s.style.left = x;
     s.style.top = y;
+
+    var t = document.createElement('img');
+    t.src = 'carrier/rock.png';
+    t.style.position = "absolute";
+    t.style.left = x;
+    t.style.top = y;
   
     return {
       init: function() {
         document.body.appendChild(s);
       },
+      
   
       run: function(e) {
         var e = e || window.event;
