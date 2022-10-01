@@ -3,12 +3,13 @@ html {
     box-sizing: border-box;
 }
 header {
-    height: 10%;
     width: 100%;
-    padding: 15px;
+    padding-bottom: 10px;
     position: fixed;
+    top: 0;
     z-index: 100;
 }
+
 body {
     font-family: 'Titillium Web', sans-serif;
     font-size: 0px;
@@ -20,6 +21,7 @@ body {
     overflow-x: hidden;
     color: #5b6259;
     padding: 15px;
+    box-sizing: border-box;
 }
 h1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -59,11 +61,12 @@ p {
     top: 0;
     left: 0;
     z-index: 100;
-    font-size: 35px;
+    font-size: 20px;
     letter-spacing: 2px;
-    padding: 20px 40px;
+    padding: 20px;
     font-family: cursive;
 }
+
 .navbar {
     overflow: hidden;
     position: fixed;
@@ -74,6 +77,7 @@ p {
     padding: 0px 40px;
     font-size: 35px;
     font-family: cursive;
+
 }
   
 .navbar a {
@@ -87,7 +91,8 @@ a {
     color: #000000e2;
 }
 a:hover {
-    color: #ffffff;
+    color: blue;
+    border-bottom: 1px blue solid;
 }
 
 iframe {
@@ -113,20 +118,19 @@ footer {
     z-index: 98;
     width: 100vw;
     text-align: right;
-    left: 0px;
+    right: 0px;
     bottom: 0px;
-    padding: 0px 40px;
-    font-size: 35px;
+    font-size: 20px;
     font-family: cursive;
     letter-spacing: 2px;
+    padding: 20px; 
     
 }
 .footernav a {
     float: right;
     display: block;
-    text-align: center;
     text-decoration: none;
-    padding: 0px 80px; 
+
 }
 
 #fadeblur {
