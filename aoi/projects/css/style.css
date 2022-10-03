@@ -1,0 +1,18 @@
+body {
+    background-color: rgb(255, 255, 255);
+}
+section {
+    height: 100vh;
+}
+img {
+    max-height: 400px;
+}
+a {
+    font-style: bold;
+}
+p {
+    font-size: 20px;
+    color: rgb(20, 20, 20);
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 15px 2px 60px rgba(0, 255, 238, 0.714), 15px 3px 70px rgba(0, 255, 238, 0.526);
+}
