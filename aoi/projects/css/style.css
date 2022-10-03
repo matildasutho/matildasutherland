@@ -1,5 +1,8 @@
 body {
+    padding: 10px;
+    box-sizing: border-box;
     background-color: rgb(255, 255, 255);
+    background-image: linear-gradient(rgb(184, 165, 150), rgb(140, 124, 102), rgb(97, 78, 60), rgb(151, 142, 129), rgb(115, 99, 86), rgb(84, 52, 35), grey);
 }
 section {
     height: 100vh;
@@ -9,10 +12,9 @@ img {
 }
 a {
     font-style: bold;
+    color: lemonchiffon;
 }
 p {
     font-size: 20px;
-    color: rgb(20, 20, 20);
-    font-family: Arial, Helvetica, sans-serif;
-    text-shadow: 15px 2px 60px rgba(0, 255, 238, 0.714), 15px 3px 70px rgba(0, 255, 238, 0.526);
+    color: white;
 }
