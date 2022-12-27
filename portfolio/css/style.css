@@ -18,7 +18,13 @@ nav, li {
 }
 
 p {
-    text-align: justify;
+    width: 50%;
+    font-family: 'Arimo', sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+    font-style: none;
+    font-weight: 200;
+    font-style: italic;
 }
 
 .hidden {

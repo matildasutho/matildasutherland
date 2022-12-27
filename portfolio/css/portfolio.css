@@ -23,8 +23,14 @@ section {
     border-top: 1px solid black;
     border-top: 1px solid black;
     margin-top: 5px;
-    height: 50vw;
+    min-height: 60vh;
     padding: 0px 3px;
+    display: block;
+}
+img {
+    margin: 2% 5%;
+    width: 40%;
+    float: right;
 }
 #follow {
     position: absolute;
@@ -202,6 +208,9 @@ section {
         width: 100vw;
         height: 230px;
         
+    }
+    img {
+        margin: 0 auto;
     }
 }
 
