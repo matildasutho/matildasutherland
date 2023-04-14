@@ -1,9 +1,3 @@
-$(document).ready(function () {
-  $(".radial-one").click(function () {
-    $("#aboot").toggleClass("hidden");
-  });
-});
-
 $("#about-btn").click(function () {
   $("html,body").animate(
     {
@@ -23,31 +17,20 @@ $("#title-head").click(function () {
 $("#projects-btn").click(function () {
   $("html,body").animate(
     {
-      scrollTop: $("#projects-page").offset().top,
-    },
+      scrollTop: $("#projects-page").offset().top - 48},
     "fast"
   );
 });
-$("#skills-btn").click(function () {
+$("#about-btn").click(function () {
   $("html,body").animate(
     {
-      scrollTop: $("#skills-page").offset().top,
-    },
-    "fast"
-  );
+      scrollTop: $("#about-page").offset().top - 48},
+    "fast");
 });
 $("#contact-btn").click(function () {
   $("html,body").animate(
     {
-      scrollTop: $("#contact-page").offset().top,
-    },
+      scrollTop: $("#contact-page").offset().top - 48},
     "fast"
   );
-});
-// image follow mouse function
-$(document).mousemove(function (e) {
-  $("#follow").css({
-    left: e.pageX,
-    top: e.pageY,
-  });
 });
