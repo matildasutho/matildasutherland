@@ -37,6 +37,13 @@ $("#contact-btn").click(function () {
   );
 });
 
+$("#btn-0").on('click', function () {
+  $("#img-box-0").show(1000);
+});
+$("#img-box-0").on("click", function () {
+  $("#img-box-0").hide(1000);
+});
+
 $("#btn-1").on('click', function () {
   $("#img-box-1").show(1000);
 });
