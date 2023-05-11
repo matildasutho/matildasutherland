@@ -1,10 +1,10 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Arimo:wght@400;700&display=swap');
 
 :root {
@@ -14,6 +14,7 @@
     --four: rgb(219, 0, 197);
     --black: rgba(0, 0, 0, 1);
 }
+
 body {
     width: 100vw;
     height: 100vh;
@@ -22,9 +23,11 @@ body {
     display: flexbox;
     flex-direction: column;
 }
-body::-webkit-scrollbar{
+
+body::-webkit-scrollbar {
     display: none;
 }
+
 header {
     font-family: 'Arimo', sans-serif;
     border-bottom: 2px solid var(--black);
@@ -34,6 +37,7 @@ header {
     height: fit-content;
     width: calc(100vw - 18px);
 }
+
 .full--width {
     width: 100vw;
 }
@@ -69,6 +73,7 @@ h3>*:hover {
     -webkit-text-stroke: 1px;
     -webkit-text-stroke-color: blue;
 }
+
 .title--font,
 .page--title {
     font-family: 'Arimo', sans-serif;
@@ -92,6 +97,7 @@ h3>*:hover {
 .menu-item {
     width: 100px;
 }
+
 section {
     position: relative;
     border-top: 1px solid black;
@@ -100,9 +106,12 @@ section {
     display: flex;
     flex-direction: horizontal;
 }
-nav, li {
+
+nav,
+li {
     display: inline;
 }
+
 p {
     font-family: 'Arimo', sans-serif;
     font-size: 0.8rem;
@@ -111,11 +120,13 @@ p {
     font-weight: 200;
     font-style: italic;
 }
+
 span {
     font-family: 'Arimo', sans-serif;
     font-style: italic;
     font-weight: 200;
 }
+
 .hidden {
     display: none;
 }
@@ -123,11 +134,13 @@ span {
 .pointer {
     cursor: pointer;
 }
+
 .frame-box,
 .img-box {
     text-align: right;
     width: 100%;
 }
+
 .txt-box {
     width: 100%;
 }
@@ -136,14 +149,17 @@ span {
     text-align: right;
     cursor: pointer;
 }
+
 iframe {
     width: 720px;
     height: 405px;
 }
+
 .img-dim {
     width: 720px;
     height: 405px;
 }
+
 .radial {
     background-image: radial-gradient(rgb(0, 0, 0), 33%, var(--white), 90%, var(--white));
 
@@ -265,6 +281,7 @@ section>* {
     overflow: hidden;
     cursor: pointer;
 }
+
 .shrinkIn {
     animation: shrink 1.3s linear;
 }
@@ -278,16 +295,19 @@ section>* {
         height: 80px;
     }
 }
+
 @media screen and (max-width: 1100px) {
     iframe {
-            width: 480px;
-            height: 270px;
-        }
+        width: 480px;
+        height: 270px;
+    }
+
     .img-dim {
-            width: 480px;
-            height: 270px;
-        }
+        width: 480px;
+        height: 270px;
+    }
 }
+
 @media screen and (max-width: 600px) {
     .title--font {
         font-size: 1.6rem;
@@ -338,9 +358,14 @@ section>* {
         height: 315px;
     }
 
+    .img-dim {
+        width: 100%;
+        height: auto;
+    }
+
     .img-box {
         text-align: right;
-        width: fit-content;
+        width: 100%;
         position: relative;
         padding-right: 9px;
 
@@ -350,7 +375,7 @@ section>* {
         position: relative;
         max-width: 100%;
         width: 580px;
-        height: 200px;
+        height: 250px;
         padding-right: 9px;
         padding-bottom: 50px;
         padding-top: 15px;
@@ -388,10 +413,12 @@ section>* {
     section {
         height: fit-content;
     }
+
     iframe {
-        height: 270px;
+        height: 220px;
         padding-top: 9px;
     }
+
     .proj-items {
         width: 220px;
         height: 115px;
