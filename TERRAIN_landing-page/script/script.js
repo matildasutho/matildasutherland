@@ -1,32 +1,17 @@
-//scrolling title
-setTimeout(rotateTitle, 250);
+// //scrolling title
+// setTimeout(rotateTitle, 250);
 
-function rotateTitle(prependSpace = false) {
-  const firstChar = document.title.substring(0, 1); //get first character
-  const nextCharIsSpace = document.title.substring(1, 2) === " ";
-  const space = prependSpace === true ? " " : ""; // if the next character is a space, add a space
+// function rotateTitle(prependSpace = false) {
+//   const firstChar = document.title.substring(0, 1); //get first character
+//   const nextCharIsSpace = document.title.substring(1, 2) === " ";
+//   const space = prependSpace === true ? " " : ""; // if the next character is a space, add a space
 
-  const newTitle = document.title.substring(1) + space + firstChar;
-  document.title = newTitle;
+//   const newTitle = document.title.substring(1) + space + firstChar;
+//   document.title = newTitle;
 
-  setTimeout(() => rotateTitle(nextCharIsSpace), 250);
-}
-
-// Subscribe Expand
-
-// function showSubscribe() {
-//   const subCont = document.getElementById("mc-container"); //toggle hidden
-//   const expandBtn = document.getElementById("btn-area"); //get state
-//   const arrow = document.getElementById("arrow-square"); //rotate this
-
-//   expandBtn.addEventListener("click", () => {
-//     var state = subCont.getAttribute("class");
-//     console.log(state);
-//     if ((state = "hidden")) {
-//       subCont.removeAttribute("hidden");
-//     }
-//   });
+//   setTimeout(() => rotateTitle(nextCharIsSpace), 250);
 // }
+
 function showSubscribe() {
   const fadeIn = [{ opacity: "0" }, { opacity: "1" }];
   const fadeout = [{ opacity: "1" }, { opacity: "0" }];
@@ -96,7 +81,7 @@ function initTrail() {
     document.write(
       '<div id="obj' +
         i +
-        '" style="position: absolute; z-Index: -5; height: 0; width: 0"><img src="' +
+        '" style="position: absolute; z-Index: -1; height: 0; width: 0; mix-blend-mode: color-burn;"><img src="' +
         images[i].src +
         '"></div>'
     );
@@ -135,3 +120,8 @@ initTrail();
 document.onmousemove = processEvent; // start capturing
 
 //-->
+
+function mediaQuery(x) {
+  if (x.matches) {
+  }
+}
