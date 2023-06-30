@@ -32,7 +32,7 @@ function showSubscribe() {
   const fadeout = [{ opacity: "1" }, { opacity: "0" }];
 
   const fadeDuration = {
-    duration: 800,
+    duration: 300,
     iterations: 1,
   };
 
@@ -47,16 +47,16 @@ function showSubscribe() {
       setTimeout(() => {
         subCont.className = "";
         subCont.animate(fadeIn, fadeDuration);
-      }, 499);
+      }, 299);
       arrow.style.transform = "rotate(90deg)"; // Rotate the arrow 90 degrees
-      arrow.style.transitionDuration = "1s";
+      arrow.style.transitionDuration = "0.3s";
     } else {
       setTimeout(() => {
         subCont.className = "hidden";
-      }, 799);
+      }, 299);
       subCont.animate(fadeout, fadeDuration);
       arrow.style.transform = "rotate(0deg)"; // Reset the rotation of the arrow
-      arrow.style.transitionDuration = "1s";
+      arrow.style.transitionDuration = "0.3s";
     }
   });
 }
