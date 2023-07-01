@@ -29,10 +29,10 @@ body {
   z-index: -10;
 }
 #logo {
-  width: 300px;
-  padding-left: calc((100vw - 300px) / 2);
+  width: 370px;
+  padding-left: calc((100vw - 370px) / 2);
   padding-top: 30vh;
-  padding-bottom: 5vh;
+  padding-bottom: 8vh;
   position: relative;
   z-index: -10;
 }

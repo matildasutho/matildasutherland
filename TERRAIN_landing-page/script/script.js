@@ -56,7 +56,7 @@ For this and over 400+ free scripts, visit http://javascriptkit.com
 */
 
 var trailLength = 150; // The length of trail (8 by default; put more for longer "tail")
-var path = "../img/paint-brush.png"; // URL of your image
+var path = "script/paint-brush.png"; // URL of your image
 
 var standardbody =
   document.compatMode == "CSS1Compat"
