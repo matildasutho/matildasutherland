@@ -22,20 +22,34 @@ body {
   width: 100vw;
   overflow-x: hidden;
 }
+a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+a:hover {
+  color: #f6f6f6;
+}
 #txt-box {
   text-align: center;
   font-size: 16px;
   position: relative;
-  z-index: -10;
+  z-index: 10;
+  filter: contrast(9);
 }
 #logo {
-  width: 370px;
   padding-left: calc((100vw - 370px) / 2);
+  width: 370px;
   padding-top: 30vh;
   padding-bottom: 8vh;
   position: relative;
-  z-index: -10;
+  font-family: "ROM";
+  z-index: 10;
+  /* font-size: 200px; */
+  overflow: visible;
+  text-align: center;
 }
+
 @media only screen and (max-width: 400px) {
   #logo {
     padding-top: 10vh;
@@ -51,17 +65,17 @@ body {
   display: none;
 }
 #mc-container {
-  width: 100vw;
+  width: 400px;
   position: absolute;
-  bottom: 40px;
+  bottom: 0px;
   left: 0;
-  z-index: 5;
+  z-index: 10;
   font-size: 16px;
 }
 #mc_embed_signup_scroll {
   font-family: "ROM";
   width: 400px;
-  height: 350px;
+  height: 305px;
   padding-left: 0;
   mix-blend-mode: difference;
 }
@@ -89,23 +103,48 @@ input {
   font-size: 16px;
   border: 2px solid black;
   text-align: left;
-  padding: 10px;
-  margin: 10px;
+  padding: 10px 15px;
+  margin: 5px 20px;
   width: fit-content;
   cursor: pointer;
+  float: right;
+}
+.button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.button:hover {
+  background-color: black;
+  color: #f6f6f6;
+  transition-duration: 0.5s;
 }
 input:focus {
   outline: none;
 }
-
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+#close-sub {
+  float: right;
+  height: 30px;
+  padding: 15px;
+}
+#close-sub:hover {
+  cursor: pointer;
+}
 footer {
   font-family: "Corona";
   position: absolute;
   bottom: 0;
-  padding: 10px;
+  padding: 5px 10px;
   font-size: 9px;
-  height: 30px;
-  width: 180px;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 #arrow-square {
@@ -113,8 +152,24 @@ footer {
   height: 30px;
   position: absolute;
   bottom: 10px;
-  left: 190px;
+  left: 10px;
   cursor: pointer;
+}
+.nav-button {
+  font-family: "ROM";
+  font-size: 16px;
+  border: none;
+  background: none;
+  text-align: left;
+  padding: 10px;
+  margin: 0px;
+  width: fit-content;
+  cursor: pointer;
+}
+.nav-button:hover {
+  background-color: black;
+  color: #f6f6f6;
+  transition-duration: 0.5s;
 }
 .lazy-fade {
   animation: 0.5s lazyFade ease-in-out;
@@ -128,5 +183,47 @@ footer {
   100% {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+
+.mouse-cursor-gradient-tracking {
+  position: relative;
+  overflow: hidden;
+}
+
+.mouse-cursor-gradient-tracking::before {
+  --size: 0;
+  content: "";
+  position: absolute;
+  z-index: -5;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, #82f74f, transparent);
+  transform: translate(-50%, -50%);
+  /* transition: width 0.2s ease, height 0.2s ease; */
+}
+
+.mouse-cursor-gradient-tracking:hover::before {
+  --size: 500px;
+}
+.trail-element {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  z-index: -9;
+  background-color: rgba(255, 255, 255, 0);
+  background: radial-gradient(circle closest-side, #82f74f, transparent);
+  transform: translate(-50%, -50%);
+  opacity: 0.1;
+  animation: 10s colourShift infinite alternate-reverse;
+}
+@keyframe colourShift {
+  0% {
+    background: radial-gradient(circle closest-side, #82f74f, transparent);
+  }
+  100% {
+    background: radial-gradient(circle closest-side, #0f45c9, transparent);
   }
 }

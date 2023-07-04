@@ -1,16 +1,28 @@
-// //scrolling title
-// setTimeout(rotateTitle, 250);
+let gradient = document.querySelector(".mouse-cursor-gradient-tracking");
+gradient.addEventListener("mousemove", (e) => {
+  let rect = e.target.getBoundingClientRect();
+  let x = e.clientX - rect.left;
+  let y = e.clientY - rect.top;
 
-// function rotateTitle(prependSpace = false) {
-//   const firstChar = document.title.substring(0, 1); //get first character
-//   const nextCharIsSpace = document.title.substring(1, 2) === " ";
-//   const space = prependSpace === true ? " " : ""; // if the next character is a space, add a space
+  for (let i = 0; i < 10; i++) {
+    setTimeout(() => {
+      let trail = document.createElement("div");
+      trail.classList.add("trail-element");
 
-//   const newTitle = document.title.substring(1) + space + firstChar;
-//   document.title = newTitle;
+      trail.style.left = x + "px";
+      trail.style.top = y + "px";
 
-//   setTimeout(() => rotateTitle(nextCharIsSpace), 250);
-// }
+      gradient.appendChild(trail);
+
+      setTimeout(() => {
+        gradient.removeChild(trail);
+      }, 500);
+    }, 10);
+  }
+
+  gradient.style.setProperty("--x", x + "px");
+  gradient.style.setProperty("--y", y + "px");
+});
 
 function showSubscribe() {
   const fadeIn = [{ opacity: "0" }, { opacity: "1" }];
@@ -22,106 +34,28 @@ function showSubscribe() {
   };
 
   const subCont = document.getElementById("mc-container");
-  const expandBtn = document.getElementById("btn-area");
-  const arrow = document.getElementById("arrow-square");
+  const expandBtn = document.getElementById("sub-expand");
+  const closeBtn = document.getElementById("close-sub");
+  const footer = document.getElementById("footer");
 
   expandBtn.addEventListener("click", () => {
     var state = subCont.getAttribute("class");
+
+    setTimeout(() => {
+      subCont.className = "";
+      subCont.animate(fadeIn, fadeDuration);
+    }, 299);
+    footer.style.display = "none";
+  });
+  closeBtn.addEventListener("click", () => {
+    var state = subCont.getAttribute("class");
     console.log(state);
-    if (state === "hidden") {
-      setTimeout(() => {
-        subCont.className = "";
-        subCont.animate(fadeIn, fadeDuration);
-      }, 299);
-      arrow.style.transform = "rotate(90deg)"; // Rotate the arrow 90 degrees
-      arrow.style.transitionDuration = "0.3s";
-    } else {
-      setTimeout(() => {
-        subCont.className = "hidden";
-      }, 299);
-      subCont.animate(fadeout, fadeDuration);
-      arrow.style.transform = "rotate(0deg)"; // Reset the rotation of the arrow
-      arrow.style.transitionDuration = "0.3s";
-    }
+    setTimeout(() => {
+      subCont.className = "hidden";
+    }, 299);
+    footer.style.display = "block";
+    subCont.animate(fadeout, fadeDuration);
   });
 }
 
 showSubscribe();
-
-/*
-Submitted by Marcin Wojtowicz [one_spook@hotmail.com] 
-Featured on JavaScript Kit (http://javascriptkit.com)
-Modified by JK to be IE7+/ Firefox compatible
-For this and over 400+ free scripts, visit http://javascriptkit.com
-*/
-
-var trailLength = 150; // The length of trail (8 by default; put more for longer "tail")
-var path = "script/paint-brush.png"; // URL of your image
-
-var standardbody =
-  document.compatMode == "CSS1Compat"
-    ? document.documentElement
-    : document.body; //create reference to common "body" across doctypes
-var i,
-  d = 0;
-
-function initTrail() {
-  // prepares the script
-  images = new Array(); // prepare the image array
-  for (i = 0; i < parseInt(trailLength); i++) {
-    images[i] = new Image();
-    images[i].src = path;
-  }
-  storage = new Array(); // prepare the storage for the coordinates
-  for (i = 0; i < images.length * 3; i++) {
-    storage[i] = 0;
-  }
-  for (i = 0; i < images.length; i++) {
-    // make divs for IE and layers for Navigator
-    document.write(
-      '<div id="obj' +
-        i +
-        '" style="position: absolute; z-Index: -1; height: 0; width: 0; mix-blend-mode: color-burn;"><img src="' +
-        images[i].src +
-        '"></div>'
-    );
-  }
-  trail();
-}
-function trail() {
-  // trailing function
-  for (i = 0; i < images.length; i++) {
-    // for every div/layer
-    document.getElementById("obj" + i).style.top = storage[d] + "px"; // the Y-coordinate
-    document.getElementById("obj" + i).style.left = +storage[d + 1] + "px"; // the X-coordinate
-    d = d + 2;
-  }
-  for (i = storage.length; i >= 2; i--) {
-    // save the coordinate for the div/layer that's behind
-    storage[i] = storage[i - 2];
-  }
-  d = 0; // reset for future use
-  var timer = setTimeout("trail()", 5); // call recursively
-}
-function processEvent(e) {
-  // catches and processes the mousemove event
-  if (window.event) {
-    // for IE
-    storage[0] = window.event.y + standardbody.scrollTop - images[0].height / 2;
-    storage[1] =
-      window.event.x + standardbody.scrollLeft - images[0].height / 2;
-  } else {
-    storage[0] = e.pageY - images[0].height / 2;
-    storage[1] = e.pageX - images[0].width / 2;
-  }
-}
-
-initTrail();
-document.onmousemove = processEvent; // start capturing
-
-//-->
-
-function mediaQuery(x) {
-  if (x.matches) {
-  }
-}
