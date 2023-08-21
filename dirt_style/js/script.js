@@ -92,7 +92,7 @@ function one() { //function name
                                                                                         replaces its content (innerHTML) with a value from the string using the getRandomText function defined above*/
   
     changeText(); /**triggers the changeText function */
-    setInterval(changeText, 4.2e3); /**specifies the interval (2.2e3 - e3 means three 0s) between each time the function is called */
+    setInterval(changeText, 2.2e3); /**specifies the interval (2.2e3 - e3 means three 0s) between each time the function is called */
 };
 setTimeout(one, 10e3); /**settimeout applies a timed delay for the function to be called. Placed outside the one() function. You can see i've separated the 
                         time out for each function within the different classes for between 10 and 30 seconds longer than the previous function.
