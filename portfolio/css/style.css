@@ -278,13 +278,14 @@ section > * {
 }
 
 .about-inner {
-  margin-top: auto;
-  margin-bottom: auto;
+    margin-top: auto;
+    margin-bottom: auto;
   width: 50vw;
 }
 
 #contact-page {
   min-height: 400px;
+  /* background-image: linear-gradient(white 50%, rgba(0, 0, 0, 0.453) 90%);  */
 }
 
 /* projects styling*/
