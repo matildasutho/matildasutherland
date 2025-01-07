@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "Helvetica Neue Bold";
+  src: url("./assets/fonts/HelveticaNeueBold.otf");
+}
+@font-face {
+  font-family: "Helvetica Neue Roman";
+  src: url("./assets/fonts/HelveticaNeueRoman.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-family: "Helvetica Neue Roman", sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.87);
+  color-scheme: dark light;
+  background-color: #000000;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --global-padding: 0.5em;
+}
+
+a {
+  font-family: "Helvetice Neue Roman", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.8em;
+  line-height: 1.8em;
+  color: white;
+  text-decoration: inherit;
+}
+a:hover {
+  transition: letter-spacing 0.3s ease-in-out;
+  letter-spacing: 5px;
+  cursor: pointer;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  font-family: "Helvetice Neue Roman", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 1.1;
+}
+footer {
+  position: fixed;
+  z-index: 200;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: var(--global-padding);
+  justify-content: space-between;
+  mix-blend-mode: difference;
+}
+footer a {
+  font-size: 1em;
+}
+@media only screen and (max-width: 400px) {
+  h1 {
+    font-size: 1.2em;
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #000000;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
