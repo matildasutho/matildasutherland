@@ -20,7 +20,7 @@
   font-weight: 400;
   --font-color: rgba(255, 255, 255, 0.87);
   color-scheme: dark light;
-  color: var(--font-color);
+
   background-color: #000000;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -47,6 +47,7 @@ a:hover {
 body {
   width: 100vw;
   height: 100vh;
+  color: var(--font-color);
 }
 
 h1 {
@@ -55,6 +56,7 @@ h1 {
   font-style: normal;
   font-size: 2em;
   line-height: 1.1;
+  color: var(--font-color);
 }
 footer {
   position: fixed;
