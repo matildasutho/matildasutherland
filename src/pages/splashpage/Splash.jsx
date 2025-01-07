@@ -46,7 +46,7 @@ const Splash = () => {
           </span>
           <span>
             <h1>
-              new single <em>heat stroke</em> out january 31st
+              <em>heat stroke</em> out january 31st
             </h1>
           </span>
         </div>

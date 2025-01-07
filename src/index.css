@@ -18,7 +18,7 @@
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
-  --font-color: rgba(30, 40, 78, 0.87);
+  --font-color: rgba(255, 255, 255, 0.87);
   color-scheme: dark light;
   color: var(--font-color);
   background-color: #000000;
@@ -72,9 +72,9 @@ footer {
 footer a {
   font-size: 1em;
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 600px) {
   h1 {
-    font-size: 1.2em;
+    font-size: 1.6em;
   }
 }
 @media (prefers-color-scheme: light) {
