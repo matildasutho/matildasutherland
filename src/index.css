@@ -11,14 +11,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow: hidden;
 }
 :root {
   font-family: "Helvetica Neue Roman", sans-serif;
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.87);
+  --font-color: rgba(30, 40, 78, 0.87);
   color-scheme: dark light;
+  color: var(--font-color);
   background-color: #000000;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -33,7 +35,7 @@ a {
   font-style: normal;
   font-size: 1.8em;
   line-height: 1.8em;
-  color: white;
+  color: var(--font-color);
   text-decoration: inherit;
 }
 a:hover {
@@ -66,7 +68,6 @@ footer {
   align-items: flex-end;
   padding: var(--global-padding);
   justify-content: space-between;
-  mix-blend-mode: difference;
 }
 footer a {
   font-size: 1em;

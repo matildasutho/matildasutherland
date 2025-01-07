@@ -26,28 +26,34 @@ const Splash = () => {
   const splashImage = splash.length > 0 ? splash[0].splashMedia.url : "";
 
   return (
-    <div
-      className="splash-wrapper"
-      style={{ backgroundImage: `url(${splashImage})` }}
-    >
-      <div
-        className={`ms-title ${isHovered || isMenuOpen ? "centered" : ""}`}
-        // onMouseEnter={() => setIsHovered(true)}
-        // onMouseLeave={() => setIsHovered(false)}
-        // onClick={() => setIsMenuOpen(!isMenuOpen)}
-      >
-        <span>
-          <h1>matilda sutherland</h1>
-        </span>
-        <span>
-          <h1>
-            new single <em>heat stroke</em> out january 31st
-          </h1>
-        </span>
+    <>
+      <div className="splash-image">
+        <img
+          src={splashImage}
+          alt="Matilda Sutherland photography by Wednesday Sutherland, 2024"
+        />
       </div>
-      {/* <Menu isOpen={isMenuOpen} /> */}
-      <Footer />
-    </div>
+
+      <div className="splash-wrapper">
+        <div
+          className={`ms-title ${isHovered || isMenuOpen ? "centered" : ""}`}
+          // onMouseEnter={() => setIsHovered(true)}
+          // onMouseLeave={() => setIsHovered(false)}
+          // onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <span>
+            <h1>matilda sutherland</h1>
+          </span>
+          <span>
+            <h1>
+              new single <em>heat stroke</em> out january 31st
+            </h1>
+          </span>
+        </div>
+        {/* <Menu isOpen={isMenuOpen} /> */}
+        <Footer />
+      </div>
+    </>
   );
 };
 

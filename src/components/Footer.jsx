@@ -7,6 +7,10 @@ const FooterPlayer = () => {
   return (
     <footer>
       <div>
+        <a href="https://matildasutherland.bandcamp.com/" target="_blank">
+          Bandcamp
+        </a>
+        ,{" "}
         <a
           href="https://open.spotify.com/artist/1HK9Qse3xlpz0uxF8emi09?si=f0GuDIMcSzmoCOUQngfNpw"
           target="_blank"
@@ -25,12 +29,12 @@ const FooterPlayer = () => {
           Substack
         </a>
         ,{" "}
-        <a href="https://matildasutherland.bandcamp.com/" target="_blank">
-          Bandcamp
-        </a>
-        ,{" "}
         <a href="https://www.instagram.com/matildasutho/" target="_blank">
           Instagram
+        </a>
+        ,{" "}
+        <a href="mailto:matildasutherland.contact@gmail.com" target="_blank">
+          Contact
         </a>
       </div>
       <div>
