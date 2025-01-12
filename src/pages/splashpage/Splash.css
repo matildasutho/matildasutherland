@@ -15,6 +15,7 @@
   width: 100vw;
   height: 100vh;
   z-index: -500;
+  opacity: 0.8;
 }
 .splash-image img {
   width: 100%;
