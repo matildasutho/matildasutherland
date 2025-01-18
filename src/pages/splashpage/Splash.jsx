@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { fetchData } from "../../utils/fetchContentful";
 import Menu from "../../components/Menu";
-import Footer from "../../components/Footer";
+import FooterPlayer from "../../components/FooterPlayer";
 import "./Splash.css";
 
 const Splash = () => {
@@ -51,7 +51,7 @@ const Splash = () => {
           </span>
         </div>
         {/* <Menu isOpen={isMenuOpen} /> */}
-        <Footer />
+        <FooterPlayer />
       </div>
     </>
   );
