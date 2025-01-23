@@ -16,11 +16,8 @@ const FooterPlayer = () => {
         </a>
       </iframe>
       <br />
+
       <div>
-        <a href="https://matildasutherland.bandcamp.com/" target="_blank">
-          Bandcamp
-        </a>
-        ,{" "}
         <a
           href="https://open.spotify.com/artist/1HK9Qse3xlpz0uxF8emi09?si=f0GuDIMcSzmoCOUQngfNpw"
           target="_blank"
@@ -28,19 +25,26 @@ const FooterPlayer = () => {
           Spotify
         </a>
         ,{" "}
-        <a href="https://girlonroad.substack.com/" target="_blank">
-          Substack
+        <a href="https://matildasutherland.bandcamp.com/" target="_blank">
+          Bandcamp
+        </a>
+        ,{" "}
+        <a
+          href="https://www.youtube.com/@matildasutherland3317"
+          target="_blank"
+        >
+          Youtube
         </a>
         ,{" "}
         <a href="https://www.instagram.com/matildasutho/" target="_blank">
           Instagram
         </a>
         ,{" "}
-        <a href="mailto:matildasutherland.contact@gmail.com" target="_blank">
+        <a href="mailto:contact@matildasutherland.com" target="_blank">
           Contact
         </a>
       </div>
-      <div>© 2024, image by Wednesday Sutherland</div>
+      <div>© 2025. Image by Wednesday Sutherland</div>
     </footer>
   );
 };
