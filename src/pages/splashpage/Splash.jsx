@@ -42,10 +42,12 @@ const Splash = () => {
           // onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <span>
-            <h1>matilda</h1>
+            <h1>matilda sutherland</h1>
           </span>
           <span>
-            <h1>sutherland</h1>
+            <h1>
+              stream <em>heat stroke</em> now
+            </h1>
           </span>
         </div>
         {/* <Menu isOpen={isMenuOpen} /> */}
