@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { fetchData } from "../../utils/fetchContentful";
 import Menu from "../../components/Menu";
-import FooterPlayer from "../../components/FooterPlayer";
+import Footer from "../../components/Footer";
 import "./Splash.css";
 
 const Splash = () => {
@@ -42,16 +42,14 @@ const Splash = () => {
           // onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <span>
-            <h1>matilda sutherland</h1>
+            <h1>matilda</h1>
           </span>
           <span>
-            <h1>
-              <em>heat stroke</em> out january 31st
-            </h1>
+            <h1>sutherland</h1>
           </span>
         </div>
         {/* <Menu isOpen={isMenuOpen} /> */}
-        <FooterPlayer />
+        <Footer />
       </div>
     </>
   );
