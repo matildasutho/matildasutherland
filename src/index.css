@@ -14,7 +14,7 @@
   overflow: hidden;
 }
 :root {
-  font-family: "Helvetica Neue Roman", sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
@@ -30,17 +30,18 @@
 }
 
 a {
-  font-family: "Helvetice Neue Roman", sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: 200;
   font-style: normal;
-  font-size: 1.8em;
-  line-height: 1.8em;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
   color: var(--font-color);
   text-decoration: inherit;
+  text-transform: uppercase;
 }
 a:hover {
   transition: letter-spacing 0.3s ease-in-out;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
   cursor: pointer;
 }
 
@@ -51,7 +52,7 @@ body {
 }
 
 h1 {
-  font-family: "Helvetice Neue Roman", sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: 200;
   font-style: normal;
   font-size: 2em;
@@ -70,9 +71,10 @@ footer {
   align-items: flex-end;
   padding: var(--global-padding);
   justify-content: space-between;
+  
 }
 footer a {
-  font-size: 1em;
+  font-size: 2rem;
 }
 @media only screen and (max-width: 600px) {
   h1 {

@@ -8,6 +8,13 @@ const FooterPlayer = () => {
     <footer>
       <div>
         <a
+          href="https://events.humanitix.com/matilda-sutherland-with-bodies-and-flesh-cherub"
+          target="_blank"
+        >
+          Buy Tickets
+        </a>
+        ,{" "}
+        <a
           href="https://open.spotify.com/artist/1HK9Qse3xlpz0uxF8emi09?si=f0GuDIMcSzmoCOUQngfNpw"
           target="_blank"
         >
@@ -34,10 +41,10 @@ const FooterPlayer = () => {
         </a>
       </div>
       <div>
-        © 2024, image by{" "}
-        <a href="https://www.wednesdaysutherland.com/" target="_blank">
+        © 2025
+        {/* <a href="https://www.wednesdaysutherland.com/" target="_blank">
           Wednesday Sutherland
-        </a>
+        </a> */}
       </div>
     </footer>
   );

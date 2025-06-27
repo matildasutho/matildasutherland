@@ -41,14 +41,13 @@ const Splash = () => {
           // onMouseLeave={() => setIsHovered(false)}
           // onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          <span>
+          {/* <span>
             <h1>matilda sutherland</h1>
-          </span>
-          <span>
+          
             <h1>
               stream <em>heat stroke</em> now
             </h1>
-          </span>
+          </span> */}
         </div>
         {/* <Menu isOpen={isMenuOpen} /> */}
         <Footer />
