@@ -21,8 +21,8 @@
   /* opacity: 0.8; */
 }
 .splash-image img {
-  width: 50vw;
-  height: auto;
+  width: auto;
+  height: 70vh;
   object-fit: contain;
 }
 .ms-title {
