@@ -19,11 +19,10 @@
   justify-content: center;
   align-items: center;
   /* opacity: 0.8; */
-  filter: invert();
 }
 .splash-image img {
-  width: auto;
-  height: 70vh;
+  width: 100vw;
+  height: auto;
   object-fit: contain;
 }
 .ms-title {
@@ -43,7 +42,6 @@
 /* Add other styles as needed */
 @media screen and (max-width: 600px) {
   .splash-image img {
-  width: 90vw;
-
-}
+    width: 90vw;
+  }
 }

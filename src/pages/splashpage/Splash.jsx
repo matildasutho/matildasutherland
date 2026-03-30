@@ -27,19 +27,12 @@ const Splash = () => {
 
   return (
     <>
-      <div className="splash-image">
-        <img
-          src={splashImage}
-          alt="Matilda Sutherland photography by Wednesday Sutherland, 2024"
-        />
-      </div>
-
       <div className="splash-wrapper">
         <div
           className={`ms-title ${isHovered || isMenuOpen ? "centered" : ""}`}
-          // onMouseEnter={() => setIsHovered(true)}
-          // onMouseLeave={() => setIsHovered(false)}
-          // onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {/* <span>
             <h1>matilda sutherland</h1>
@@ -50,6 +43,7 @@ const Splash = () => {
           </span> */}
         </div>
         {/* <Menu isOpen={isMenuOpen} /> */}
+
         <Footer />
       </div>
     </>

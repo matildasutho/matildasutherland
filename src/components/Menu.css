@@ -1,7 +1,7 @@
 .menu {
   display: block;
   opacity: 0;
-
+  mix-blend-mode: difference;
   /* Add other styles as needed */
 }
 
@@ -10,5 +10,6 @@
   text-align: center;
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
+
   /* Add other styles as needed */
 }

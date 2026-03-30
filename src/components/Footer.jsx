@@ -7,13 +7,12 @@ const FooterPlayer = () => {
   return (
     <footer>
       <div>
-        <a
+        {/* <a
           href="https://events.humanitix.com/matilda-sutherland-with-bodies-and-flesh-cherub"
           target="_blank"
         >
           Buy Tickets
-        </a>
-        ,{" "}
+        </a> */}{" "}
         <a
           href="https://open.spotify.com/artist/1HK9Qse3xlpz0uxF8emi09?si=f0GuDIMcSzmoCOUQngfNpw"
           target="_blank"
