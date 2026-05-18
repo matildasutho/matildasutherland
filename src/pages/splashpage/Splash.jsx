@@ -1,52 +1,53 @@
-import React, { useState, useEffect } from "react";
-import { fetchData } from "../../utils/fetchContentful";
-import Menu from "../../components/Menu";
-import Footer from "../../components/Footer";
+import React from "react";
 import "./Splash.css";
 
 const Splash = () => {
-  const [splash, setSplash] = useState([]);
-  const [isHovered, setIsHovered] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const fetchSplash = async () => {
-      try {
-        const data = await fetchData();
-        console.log("Fetched splash data:", data.splashImageCollection.items);
-        setSplash(data.splashImageCollection.items);
-      } catch (error) {
-        console.error("Error fetching splash:", error);
-      }
-    };
-
-    fetchSplash();
-  }, []);
-
-  const splashImage = splash.length > 0 ? splash[0].splashMedia.url : "";
-
   return (
-    <>
-      <div className="splash-wrapper">
-        <div
-          className={`ms-title ${isHovered || isMenuOpen ? "centered" : ""}`}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {/* <span>
-            <h1>matilda sutherland</h1>
-          
-            <h1>
-              stream <em>heat stroke</em> now
-            </h1>
-          </span> */}
-        </div>
-        {/* <Menu isOpen={isMenuOpen} /> */}
+    <div className="splash-wrapper">
+      <img className="splash-image" src="/MS_BG_optimised-1920.jpg" alt="" />
 
-        <Footer />
-      </div>
-    </>
+      <footer className="splash-footer">
+        <a
+          href="https://open.spotify.com/artist/1HK9Qse3xlpz0uxF8emi09?si=f0GuDIMcSzmoCOUQngfNpw"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Spotify
+        </a>
+        ,{" "}
+        <a
+          href="https://matildasutherland.bandcamp.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Bandcamp
+        </a>
+        ,{" "}
+        <a
+          href="https://www.youtube.com/@matildasutherland3317"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Youtube
+        </a>
+        ,{" "}
+        <a
+          href="https://www.instagram.com/matildasutho/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Instagram
+        </a>
+        ,{" "}
+        <a
+          href="mailto:contact@matildasutherland.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Contact
+        </a>
+      </footer>
+    </div>
   );
 };
 

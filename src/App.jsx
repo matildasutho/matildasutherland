@@ -13,10 +13,6 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Splash />} />
-        <Route
-          path="/matilda-sutherland-musician-biography"
-          element={<Biography />}
-        />
       </Routes>
     </>
   );
