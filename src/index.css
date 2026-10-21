@@ -1,83 +1,440 @@
+/* Clean, modern, full width. No rounded corners, no shadows, no heavy borders. */
+
 @font-face {
-  font-family: "Helvetica Neue Bold";
-  src: url("./assets/fonts/HelveticaNeueBold.otf");
+  font-family: "Helvetica Neue Local";
+  src: url("./assets/fonts/HelveticaNeueRoman.otf");
+  font-weight: 400;
+  font-display: swap;
 }
 @font-face {
-  font-family: "Helvetica Neue Roman";
-  src: url("./assets/fonts/HelveticaNeueRoman.otf");
+  font-family: "Helvetica Neue Local";
+  src: url("./assets/fonts/HelveticaNeueBold.otf");
+  font-weight: 700;
+  font-display: swap;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
+
 :root {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: 400;
-  --font-color: rgba(255, 255, 255, 0.87);
-  color-scheme: dark light;
-
-  background-color: #000000;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  --global-padding: 0.5em;
+  --ink: #111;
+  --paper: #fff;
+  --muted: #777;
+  --hairline: 1px solid #e4e4e4;
+  --gutter: 32px;
+  --space: 96px;
 }
 
-a {
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: 200;
-  font-style: normal;
-  font-size: 2.4rem;
-  line-height: 2.4rem;
-  color: var(--font-color);
-  text-decoration: inherit;
-  text-transform: uppercase;
-}
-a:hover {
-  transition: letter-spacing 0.3s ease-in-out;
-  letter-spacing: 2px;
-  cursor: pointer;
+html {
+  background: var(--paper);
+  scroll-behavior: smooth;
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
-  color: var(--font-color);
+  font-family: "Helvetica Neue Local", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-h1 {
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: 200;
-  font-style: normal;
-  font-size: 2em;
-  line-height: 1.1;
-  color: var(--font-color);
+img {
+  display: block;
+  max-width: 100%;
 }
-footer {
-  position: fixed;
-  z-index: 200;
-  bottom: 0;
+
+a,
+a:visited {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+h1,
+h2,
+h3 {
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* ---------- top bar ---------- */
+.topbar,
+.site-footer {
+  font-family: "Times New Roman", Times, serif;
+}
+/* Overlays the hero; difference blend keeps it legible on light and dark */
+.topbar {
+  position: absolute;
+  top: 0;
   left: 0;
-  width: 100%;
-  height: fit-content;
+  right: 0;
+  z-index: 10;
+  mix-blend-mode: difference;
+  color: #fff;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  padding: var(--global-padding);
+  flex-wrap: wrap;
   justify-content: space-between;
-  
+  align-items: center;
+  gap: 8px 24px;
+  padding: 20px var(--gutter);
 }
-footer a {
-  font-size: 2rem;
+.topbar h1 {
+  font-size: 18px;
 }
-@media only screen and (max-width: 600px) {
-  h1 {
-    font-size: 1.6em;
+.topbar a,
+.topbar a:visited {
+  color: #fff;
+}
+.topbar h1 a {
+  text-decoration: none;
+}
+.topbar nav {
+  font-size: 13px;
+  word-spacing: 10px;
+}
+.topbar nav a {
+  text-decoration: none;
+}
+.topbar nav a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- hero ---------- */
+.hero {
+  width: 100%;
+  height: 85vh;
+  min-height: 320px;
+  max-height: 960px;
+  object-fit: cover;
+}
+
+/* ---------- shared type ---------- */
+.eyebrow {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.display {
+  font-size: clamp(42px, 8vw, 120px);
+  letter-spacing: -0.03em;
+  line-height: 0.88;
+}
+.lede {
+  font-size: clamp(18px, 2vw, 24px);
+  margin-top: 24px;
+  max-width: 32em;
+}
+
+/* ---------- sections ---------- */
+.section-heading h2 {
+  font-size: clamp(26px, 3vw, 42px);
+}
+.section-content > * + * {
+  margin-top: 1em;
+}
+.section-content {
+  max-width: 40em;
+}
+.section-content ul {
+  padding-left: 1.2em;
+}
+
+/* Text-only: heading left, content right */
+.section--split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gutter);
+  padding: var(--space) var(--gutter) 0;
+}
+
+/* Image + text: image bleeds to the edge on its half */
+.section--image {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: var(--space);
+}
+.section--image.img-left .section-img {
+  order: -1;
+}
+.section-text {
+  padding: var(--gutter);
+  align-self: center;
+}
+.section--image .section-heading {
+  margin-bottom: 32px;
+}
+.section-img {
+  width: 100%;
+  height: 100%;
+  min-height: 50vw;
+  object-fit: cover;
+}
+
+/* ---------- square button ---------- */
+.button,
+.button:visited {
+  display: inline-block;
+  padding: 10px 18px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.button:hover {
+  background: #444;
+  color: var(--paper);
+}
+.button--large,
+.button--large:visited {
+  margin-top: 16px;
+  padding: 18px 28px;
+  font-size: 15px;
+}
+
+/* ---------- gig table ---------- */
+.gigs {
+  width: 100%;
+  border-collapse: collapse;
+}
+.gigs td {
+  padding: 18px 0;
+  border-bottom: var(--hairline);
+  vertical-align: middle;
+}
+.gigs tr:first-child td {
+  padding-top: 0;
+}
+.gigs .date {
+  white-space: nowrap;
+  font-weight: 700;
+  width: 1%;
+  padding-right: 32px;
+}
+.gigs .city {
+  display: block;
+  color: var(--muted);
+  font-size: 15px;
+}
+.gigs .tix {
+  text-align: right;
+  width: 1%;
+  padding-left: 16px;
+}
+
+/* ---------- links ---------- */
+.links {
+  list-style: none;
+  padding: 0 !important;
+}
+.links li + li {
+  margin-top: 4px;
+}
+.links a,
+.links a:visited {
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(20px, 2vw, 26px);
+  line-height: 1.3;
+  text-decoration: none;
+}
+.links a:hover {
+  color: var(--muted);
+}
+
+/* ---------- details table (gig page) ---------- */
+.details {
+  width: 100%;
+  border-collapse: collapse;
+}
+.details th,
+.details td {
+  text-align: left;
+  vertical-align: top;
+  padding: 12px 0;
+  border-bottom: var(--hairline);
+}
+.details tr:first-child th,
+.details tr:first-child td {
+  padding-top: 0;
+}
+.details th {
+  width: 1%;
+  white-space: nowrap;
+  padding-right: 32px;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+  line-height: 2.2;
+}
+
+.faq dt {
+  font-weight: 700;
+}
+.faq dd {
+  margin: 0 0 1.2em 0;
+  color: var(--muted);
+}
+
+/* ---------- footer ---------- */
+.site-footer {
+  padding: var(--space) var(--gutter) 24px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.site-footer a,
+.site-footer a:visited {
+  color: var(--muted);
+}
+
+@media (max-width: 800px) {
+  :root {
+    --gutter: 20px;
+    --space: 64px;
+  }
+  body {
+    font-size: 16px;
+  }
+  .section--split,
+  .section--image {
+    grid-template-columns: 1fr;
+  }
+  .section--split {
+    gap: 20px;
+  }
+  .section--image .section-img {
+    order: -1;
+    min-height: 100vw;
+  }
+  .section-text {
+    padding-top: 32px;
+  }
+  .hero {
+    height: 65vh;
+  }
+  .gigs tr {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2px 16px;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: var(--hairline);
+  }
+  .gigs tr:first-child {
+    padding-top: 0;
+  }
+  .gigs td,
+  .gigs tr:first-child td {
+    padding: 0;
+    border: 0;
+    width: auto;
+  }
+  .gigs .date {
+    grid-column: 1 / -1;
+  }
+  .details th {
+    padding-right: 16px;
+  }
+}
+
+/* ---------- videos: two up, edge to edge ---------- */
+.videos {
+  margin-top: var(--space);
+}
+.videos-heading {
+  padding: 0 var(--gutter) 32px;
+}
+.videos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.video iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  background: #000;
+}
+.video figcaption {
+  padding: 12px var(--gutter) 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+@media (max-width: 800px) {
+  .videos-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* ---------- uncropped image options ---------- */
+/* Section image shown whole (e.g. a poster) */
+.section--image.img-natural .section-img {
+  height: auto;
+  min-height: 0;
+  align-self: start;
+}
+
+/* ---------- gig page hero: text left, promo image right ---------- */
+.gig-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.gig-hero-text {
+  padding: 48px var(--gutter);
+}
+.gig-hero .display {
+  font-size: clamp(40px, 5.4vw, 92px);
+}
+.gig-hero .lede {
+  margin-top: 20px;
+}
+.gig-hero-meta {
+  margin: 20px 0 8px;
+}
+.gig-hero-img {
+  width: 100%;
+  height: 100vh;
+  min-height: 560px;
+  max-height: 1100px;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+@media (max-width: 800px) {
+  .gig-hero {
+    grid-template-columns: 1fr;
+  }
+  .gig-hero-img {
+    order: -1;
+    height: 110vw;
+    min-height: 0;
+  }
+  .gig-hero-text {
+    padding: 32px var(--gutter) 0;
   }
 }
