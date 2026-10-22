@@ -2,6 +2,7 @@ import TopBar from "../../components/TopBar";
 import Section from "../../components/Section";
 import Links from "../../components/Links";
 import Videos from "../../components/Videos";
+import { FeaturedRelease } from "../../components/Releases";
 
 // Edit your gig dates here. Set `href` to the ticket link.
 const GIGS = [
@@ -17,8 +18,9 @@ const Home = () => {
   return (
     <>
       <TopBar>
-        <a href="#gigs">Gigs</a> <a href="#bio">Bio</a>{" "}
-        <a href="/videos/">Videos</a> <a href="#links">Links</a>
+        <a href="/listen/">Listen</a> <a href="#gigs">Gigs</a>{" "}
+        <a href="#bio">Bio</a> <a href="/videos/">Videos</a>{" "}
+        <a href="#links">Links</a>
       </TopBar>
 
       <img
@@ -26,6 +28,8 @@ const Home = () => {
         src="/MS_BG_optimised-1920.jpg"
         alt="Matilda Sutherland"
       />
+
+      <FeaturedRelease id="listen" />
 
       <Section id="gigs" title="Gig dates">
         <table className="gigs">

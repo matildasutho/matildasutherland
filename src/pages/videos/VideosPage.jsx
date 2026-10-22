@@ -5,8 +5,8 @@ const VideosPage = () => {
   return (
     <div className="videos-page">
       <TopBar>
-        <a href="/">Home</a> <a href="/videos/">Videos</a>{" "}
-        <a href="/cowgirl-manifesto/">Tickets</a>
+        <a href="/">Home</a> <a href="/listen/">Listen</a>{" "}
+        <a href="/videos/">Videos</a> <a href="/cowgirl-manifesto/">Tickets</a>
       </TopBar>
 
       <Videos />

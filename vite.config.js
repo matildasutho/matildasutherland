@@ -14,6 +14,7 @@ export default defineConfig({
           new URL('./cowgirl-manifesto/index.html', import.meta.url)
         ),
         videos: fileURLToPath(new URL('./videos/index.html', import.meta.url)),
+        listen: fileURLToPath(new URL('./listen/index.html', import.meta.url)),
       },
     },
   },

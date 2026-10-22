@@ -80,8 +80,16 @@ const GigHero = ({ pinned }) => (
     </div>
     <img
       className="gig-hero-img"
-      src="/matilda-optimised-press-shot.jpg"
-      alt="Matilda Sutherland in a park"
+      src={
+        pinned
+          ? "/matilda-optimised-press-shot.jpg"
+          : "/matilda-11-optimised.jpg"
+      }
+      alt={
+        pinned
+          ? "Matilda Sutherland in a park"
+          : "Matilda Sutherland sitting with an acoustic guitar"
+      }
     />
   </section>
 );
@@ -90,7 +98,8 @@ const CowgirlManifesto = () => {
   return (
     <div className="gig-page">
       <TopBar>
-        <a href="/">Home</a> <a href="/videos/">Videos</a>{" "}
+        <a href="/">Home</a> <a href="/listen/">Listen</a>{" "}
+        <a href="/videos/">Videos</a>{" "}
         <a href={TICKETS_URL} target="_blank" rel="noreferrer">
           Tickets
         </a>
@@ -140,18 +149,38 @@ const CowgirlManifesto = () => {
         </p>
       </Section>
 
+      {/* Full-width band shot with the text overlaid on the left half */}
+      <section className="overlay-section">
+        <img
+          className="overlay-img"
+          src="/band-shot.jpg"
+          alt="Matilda Sutherland performing with her five-piece band"
+        />
+        <div className="overlay-text">
+          <header className="section-heading">
+            <h2>About the show</h2>
+          </header>
+          <div className="section-content">
+            <p>
+              Experience Matilda Sutherland&apos;s raw blend of country
+              storytelling and alt-rock grit as she performs her Cowgirl
+              Manifesto EP live at Abbotsford Convent&apos;s historic Oratory on
+              Saturday, 7 November with Andrew Wilson &amp; CCTV.
+            </p>
+            <p>
+              Matilda will play with a five-piece band: pedal steel, guitar,
+              bass, piano and drums.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <Section
-        title="About the show"
+        title="Artist bio"
         image="/Cowgirl-manifesto-assets/performance-img.jpg"
         imageAlt="Matilda Sutherland singing on stage with her band"
         imageSide="left"
       >
-        <p>
-          Experience Matilda Sutherland&apos;s raw blend of country storytelling
-          and alt-rock grit as she performs her Cowgirl Manifesto EP live at
-          Abbotsford Convent&apos;s historic Oratory on Saturday, 7 November
-          with Andrew Wilson &amp; CCTV.
-        </p>
         <p>
           Making music that sits somewhere between country confessional and raw
           rock and roll, Matilda carries on the gritty storytelling tradition of
