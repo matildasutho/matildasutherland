@@ -66,7 +66,6 @@ const CowgirlManifesto = () => {
 
       <section className="gig-hero">
         <div className="gig-hero-text">
-          <p className="eyebrow">Matilda Sutherland presents</p>
           <h2 className="display">Cowgirl Manifesto</h2>
           <p className="lede">
             Live at Abbotsford Convent, with Andrew Wilson &amp; CCTV.
