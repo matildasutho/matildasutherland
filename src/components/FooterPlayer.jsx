@@ -44,7 +44,7 @@ const FooterPlayer = () => {
           Contact
         </a>
       </div>
-      <div>© 2025. Image by Wednesday Sutherland</div>
+      <div>© 2026</div>
     </footer>
   );
 };

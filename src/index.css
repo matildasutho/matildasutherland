@@ -13,6 +13,13 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Miletus Grotesk";
+  src: url("./assets/fonts/MiletusGrotesk-Bold.otf");
+  font-weight: 700;
+  font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -36,8 +43,8 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue Local", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font-family:
+    "Helvetica Neue Local", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 17px;
   line-height: 1.6;
   color: var(--ink);
@@ -249,6 +256,7 @@ h3 {
 .links {
   list-style: none;
   padding: 0 !important;
+  text-transform: uppercase;
 }
 .links li + li {
   margin-top: 4px;
@@ -437,4 +445,24 @@ h3 {
   .gig-hero-text {
     padding: 32px var(--gutter) 0;
   }
+}
+
+/* ---------- gig page: Miletus caps headings, red titles + buttons ---------- */
+.gig-page h2 {
+  font-family: "Miletus Grotesk", "Helvetica Neue Local", Helvetica, Arial,
+    sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  color: #ff0000;
+}
+.gig-page .button,
+.gig-page .button:visited {
+  background: #ff0000;
+  color: #fff;
+}
+.gig-page .button:hover {
+  background: #cc0000;
+  color: #fff;
 }

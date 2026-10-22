@@ -11,24 +11,6 @@ const GIGS = [
     city: "Melbourne VIC",
     href: "/cowgirl-manifesto/",
   },
-  {
-    date: "Fri 20 Nov 2026",
-    venue: "The Old Bar",
-    city: "Fitzroy VIC",
-    href: "#",
-  },
-  {
-    date: "Sat 5 Dec 2026",
-    venue: "Lazybones Lounge",
-    city: "Marrickville NSW",
-    href: "#",
-  },
-  {
-    date: "Sun 17 Jan 2027",
-    venue: "Port Fairy Folk Festival",
-    city: "Port Fairy VIC",
-    href: "#",
-  },
 ];
 
 const Home = () => {
@@ -36,8 +18,7 @@ const Home = () => {
     <>
       <TopBar>
         <a href="#gigs">Gigs</a> <a href="#bio">Bio</a>{" "}
-        <a href="#videos">Videos</a>{" "}
-        <a href="#links">Links</a>
+        <a href="#videos">Videos</a> <a href="#links">Links</a>
       </TopBar>
 
       <img
@@ -83,11 +64,10 @@ const Home = () => {
         <p>
           Hailing from coastal New South Wales, Matilda grew up surrounded by
           surf rock, folk, soul and 80s ballads before relocating to Melbourne
-          in 2014. She began her musical career as a DJ under the moniker
-          MTLDA, becoming a respected fixture of Melbourne&apos;s underground
-          techno scene. When the pandemic ground nightlife to a halt, a beat-up
-          old Yamaha acoustic guitar became the catalyst for a new creative
-          chapter.
+          in 2014. She began her musical career as a DJ under the moniker MTLDA,
+          becoming a respected fixture of Melbourne&apos;s underground techno
+          scene. When the pandemic ground nightlife to a halt, a beat-up old
+          Yamaha acoustic guitar became the catalyst for a new creative chapter.
         </p>
         <p>
           Since then, Matilda has steadily built a reputation as one of
@@ -104,8 +84,7 @@ const Home = () => {
       </Section>
 
       <footer className="site-footer">
-        © {new Date().getFullYear()} Matilda Sutherland. Image by Wednesday
-        Sutherland.
+        © {new Date().getFullYear()} Matilda Sutherland.
       </footer>
     </>
   );
