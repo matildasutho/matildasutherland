@@ -1,24 +1,39 @@
+/* Clean, modern, full width. No rounded corners, no shadows, no heavy borders. */
+
 @font-face {
-  font-family: "Helvetica Neue Bold";
-  src: url("./assets/fonts/HelveticaNeueBold.otf");
+  font-family: "Helvetica Neue Local";
+  src: url("./assets/fonts/HelveticaNeueRoman.otf");
+  font-weight: 400;
+  font-display: swap;
 }
 @font-face {
-  font-family: "Helvetica Neue Roman";
-  src: url("./assets/fonts/HelveticaNeueRoman.otf");
+  font-family: "Helvetica Neue Local";
+  src: url("./assets/fonts/HelveticaNeueBold.otf");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Miletus Grotesk";
+  src: url("./assets/fonts/MiletusGrotesk-Bold.otf");
+  font-weight: 700;
+  font-display: swap;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
+
 :root {
   font-family: "Times New Roman", Times, serif;
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
-  --font-color: rgba(0, 0, 0, 0.87);
+  --font-color: rgba(255, 255, 255, 0.87);
   color-scheme: dark light;
 
   background-color: #000000;
@@ -40,6 +55,8 @@ a {
   text-transform: uppercase;
 }
 a:hover {
+  transition: letter-spacing 0.3s ease-in-out;
+  letter-spacing: 2px;
   cursor: pointer;
 }
 
@@ -47,9 +64,6 @@ body {
   width: 100vw;
   height: 100vh;
   color: var(--font-color);
-  background-image: url("/MS_BG_optimised-1920.jpg");
-  background-size: cover;
-  background-position: center;
 }
 
 h1 {
@@ -60,10 +74,22 @@ h1 {
   line-height: 1.1;
   color: var(--font-color);
 }
-p {
-  mix-blend-mode: screen;
+footer {
+  position: fixed;
+  z-index: 200;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: var(--global-padding);
+  justify-content: space-between;
 }
-
+footer a {
+  font-size: 2rem;
+}
 @media only screen and (max-width: 600px) {
   h1 {
     font-size: 1.6em;

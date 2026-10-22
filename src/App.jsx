@@ -1,18 +1,16 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  BrowserRouter,
-} from "react-router-dom";
-import Splash from "./pages/splashpage/Splash";
-import Biography from "./pages/biography/Biography";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Home from "./pages/home/Home";
 import "./App.css";
 
 function App() {
   return (
     <>
       <Routes>
+<<<<<<< HEAD
         <Route path="/" element={<Splash />} />
+=======
+        <Route path="/" element={<Home />} />
+>>>>>>> dev
       </Routes>
     </>
   );

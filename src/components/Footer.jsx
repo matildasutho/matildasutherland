@@ -41,7 +41,7 @@ const FooterPlayer = () => {
         </a>
       </div>
       <div>
-        © 2025
+        © 2026
         {/* <a href="https://www.wednesdaysutherland.com/" target="_blank">
           Wednesday Sutherland
         </a> */}
