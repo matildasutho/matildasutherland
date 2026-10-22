@@ -77,7 +77,7 @@ const CowgirlManifesto = () => {
             The Oratory, Abbotsford Convent
           </p>
           <a
-            className="button button--large"
+            className="button button--large gig-hero-cta"
             href={TICKETS_URL}
             target="_blank"
             rel="noreferrer"
@@ -87,7 +87,7 @@ const CowgirlManifesto = () => {
         </div>
         <img
           className="gig-hero-img"
-          src="/Cowgirl-manifesto-assets/cm-event-promo.jpg"
+          src="/matilda-optimised-press-shot.jpg"
           alt="Matilda Sutherland in a park"
         />
       </section>
@@ -235,8 +235,8 @@ const CowgirlManifesto = () => {
         imageAlt="Cowgirl Manifesto T-shirt"
       >
         <p>
-          There will be a small run of Cowgirl Manifesto T-shirts! Grab one at
-          the show for $40, or order yours online now.
+          There will be a small run of Cowgirl Manifesto T-shirts! You can get
+          one at the show for $40, or order yours online now.
         </p>
         <p>
           T-shirts are white, and feature the Cowgirl Manifesto EP cover and

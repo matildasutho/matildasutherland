@@ -108,7 +108,7 @@ h3 {
   padding: 20px var(--gutter);
 }
 .topbar h1 {
-  font-size: 18px;
+  font-size: inherit;
 }
 .topbar a,
 .topbar a:visited {
@@ -118,7 +118,7 @@ h3 {
   text-decoration: none;
 }
 .topbar nav {
-  font-size: 13px;
+  font-size: inherit;
   word-spacing: 10px;
 }
 .topbar nav a {
@@ -139,7 +139,7 @@ h3 {
 
 /* ---------- shared type ---------- */
 .eyebrow {
-  font-size: 12px;
+  font-size: inherit;
   color: var(--muted);
   margin-bottom: 12px;
 }
@@ -149,7 +149,7 @@ h3 {
   line-height: 0.88;
 }
 .lede {
-  font-size: clamp(18px, 2vw, 24px);
+  font-size: inherit;
   margin-top: 24px;
   max-width: 32em;
 }
@@ -206,7 +206,7 @@ h3 {
   padding: 10px 18px;
   background: var(--ink);
   color: var(--paper);
-  font-size: 12px;
+  font-size: inherit;
   font-weight: 700;
   text-decoration: none;
   white-space: nowrap;
@@ -218,8 +218,7 @@ h3 {
 .button--large,
 .button--large:visited {
   margin-top: 16px;
-  padding: 18px 28px;
-  font-size: 15px;
+  padding: 10px 28px;
 }
 
 /* ---------- gig table ---------- */
@@ -244,7 +243,6 @@ h3 {
 .gigs .city {
   display: block;
   color: var(--muted);
-  font-size: 15px;
 }
 .gigs .tix {
   text-align: right;
@@ -264,8 +262,8 @@ h3 {
 .links a,
 .links a:visited {
   font-family: "Times New Roman", Times, serif;
-  font-size: clamp(20px, 2vw, 26px);
-  line-height: 1.3;
+  font-size: inherit;
+  line-height: 1.6;
   text-decoration: none;
 }
 .links a:hover {
@@ -292,10 +290,8 @@ h3 {
   width: 1%;
   white-space: nowrap;
   padding-right: 32px;
-  font-size: 12px;
   font-weight: 400;
   color: var(--muted);
-  line-height: 2.2;
 }
 
 .faq dt {
@@ -309,7 +305,6 @@ h3 {
 /* ---------- footer ---------- */
 .site-footer {
   padding: var(--space) var(--gutter) 24px;
-  font-size: 13px;
   color: var(--muted);
 }
 .site-footer a,
@@ -387,7 +382,6 @@ h3 {
 }
 .video figcaption {
   padding: 12px var(--gutter) 0;
-  font-size: 14px;
   color: var(--muted);
 }
 
@@ -430,7 +424,7 @@ h3 {
   min-height: 560px;
   max-height: 1100px;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: right;
 }
 
 @media (max-width: 800px) {
@@ -447,22 +441,51 @@ h3 {
   }
 }
 
-/* ---------- gig page: Miletus caps headings, red titles + buttons ---------- */
+/* ---------- gig page: Helvetica headings, Miletus caps hero, red buttons ---------- */
 .gig-page h2 {
+  font-family:
+    "Helvetica Neue Local", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #000000;
+}
+.gig-page .gig-hero .display {
   font-family:
     "Miletus Grotesk", "Helvetica Neue Local", Helvetica, Arial, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  line-height: 1.2;
-  color: #000000;
 }
 .gig-page .button,
 .gig-page .button:visited {
-  background: #000000;
+  background: #ff0000;
   color: #fff;
 }
 .gig-page .button:hover {
-  background: #ff0000;
+  background: #000000;
   color: #fff;
+}
+.gig-page .button--large,
+.gig-page .button--large:visited {
+  padding: 24px 44px;
+  letter-spacing: 0.04em;
+}
+
+/* Mobile: hero "Get tickets" pinned to the bottom of the screen */
+@media (max-width: 800px) {
+  .gig-page {
+    padding-bottom: calc(76px + env(safe-area-inset-bottom));
+  }
+  .gig-page .gig-hero-cta {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    margin: 12px;
+    padding: 16px 24px;
+    /* !important beats the global no-shadow reset at the top of this file */
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+    text-align: center;
+  }
 }
