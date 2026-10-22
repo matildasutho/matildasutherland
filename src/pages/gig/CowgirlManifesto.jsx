@@ -54,43 +54,49 @@ const FAQS = [
 //   image="/your-photo.jpg" imageAlt="..." imageSide="left"
 // Put the image file in /public and reference it with a leading slash.
 
+// Hero banner, shown at the top and again at the base of the page.
+// `pinned` makes its ticket button stick to the bottom of the screen on mobile.
+const GigHero = ({ pinned }) => (
+  <section className={`gig-hero${pinned ? "" : " gig-hero--end"}`}>
+    <div className="gig-hero-text">
+      <h2 className="display">Cowgirl Manifesto</h2>
+      <p className="lede">
+        Live at Abbotsford Convent, with Andrew Wilson &amp; CCTV.
+        <br />★ City girl country rock ★
+      </p>
+      <p className="gig-hero-meta">
+        <b>Sat 7 November, 7pm</b>
+        <br />
+        The Oratory, Abbotsford Convent
+      </p>
+      <a
+        className={`button button--large${pinned ? " gig-hero-cta" : ""}`}
+        href={TICKETS_URL}
+        target="_blank"
+        rel="noreferrer"
+      >
+        Get tickets
+      </a>
+    </div>
+    <img
+      className="gig-hero-img"
+      src="/matilda-optimised-press-shot.jpg"
+      alt="Matilda Sutherland in a park"
+    />
+  </section>
+);
+
 const CowgirlManifesto = () => {
   return (
     <div className="gig-page">
       <TopBar>
-        <a href="/">Home</a>{" "}
+        <a href="/">Home</a> <a href="/videos/">Videos</a>{" "}
         <a href={TICKETS_URL} target="_blank" rel="noreferrer">
           Tickets
         </a>
       </TopBar>
 
-      <section className="gig-hero">
-        <div className="gig-hero-text">
-          <h2 className="display">Cowgirl Manifesto</h2>
-          <p className="lede">
-            Live at Abbotsford Convent, with Andrew Wilson &amp; CCTV.
-            <br />★ City girl country rock ★
-          </p>
-          <p className="gig-hero-meta">
-            <b>Sat 7 November, 7pm</b>
-            <br />
-            The Oratory, Abbotsford Convent
-          </p>
-          <a
-            className="button button--large"
-            href={TICKETS_URL}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Get tickets
-          </a>
-        </div>
-        <img
-          className="gig-hero-img"
-          src="/Cowgirl-manifesto-assets/cm-event-promo.jpg"
-          alt="Matilda Sutherland in a park"
-        />
-      </section>
+      <GigHero pinned />
 
       <Section
         title="Details"
@@ -168,7 +174,8 @@ const CowgirlManifesto = () => {
         </p>
       </Section>
 
-      <Videos />
+      {/* Rodeo Queen and Silver Thorn */}
+      <Videos only={["scPM2IMqC6Y", "icKWLLSF40o"]} />
 
       <Section eyebrow="Support" title="Andrew Wilson">
         <p>
@@ -270,6 +277,8 @@ const CowgirlManifesto = () => {
       <Section title="Links">
         <Links />
       </Section>
+
+      <GigHero />
 
       <footer className="site-footer">
         © {new Date().getFullYear()} Matilda Sutherland.{" "}

@@ -13,6 +13,7 @@ export default defineConfig({
         cowgirlManifesto: fileURLToPath(
           new URL('./cowgirl-manifesto/index.html', import.meta.url)
         ),
+        videos: fileURLToPath(new URL('./videos/index.html', import.meta.url)),
       },
     },
   },

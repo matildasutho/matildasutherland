@@ -18,7 +18,7 @@ const Home = () => {
     <>
       <TopBar>
         <a href="#gigs">Gigs</a> <a href="#bio">Bio</a>{" "}
-        <a href="#videos">Videos</a> <a href="#links">Links</a>
+        <a href="/videos/">Videos</a> <a href="#links">Links</a>
       </TopBar>
 
       <img

@@ -91,9 +91,9 @@ h3 {
 .site-footer {
   font-family: "Times New Roman", Times, serif;
 }
-/* Overlays the hero; difference blend keeps it legible on light and dark */
+/* Sticks over the page; difference blend keeps it legible on light and dark */
 .topbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -180,7 +180,6 @@ h3 {
 .section--image {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: var(--space);
 }
 .section--image.img-left .section-img {
   order: -1;
@@ -367,7 +366,7 @@ h3 {
   }
 }
 
-/* ---------- videos: two up, edge to edge ---------- */
+/* ---------- videos: thumbnail grid, edge to edge ---------- */
 .videos {
   margin-top: var(--space);
 }
@@ -376,26 +375,107 @@ h3 {
 }
 .videos-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px var(--gutter);
+  padding: 0 var(--gutter);
 }
-.video iframe {
+.videos-grid--two {
+  grid-template-columns: repeat(2, 1fr);
+}
+.video-thumb {
+  position: relative;
+  display: block;
+  width: 100%;
+  border: 0;
+  background: #000;
+  cursor: pointer;
+  overflow: hidden;
+}
+.video-thumb img {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
-  border: 0;
-  background: #000;
+  object-fit: cover;
+}
+/* Play icon in the red button colourway; inverts on hover */
+.video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: #ff0000;
+  color: #f6e0f2;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+.video-play svg {
+  width: 32px;
+  height: 32px;
+  fill: currentColor;
+}
+.video-thumb:hover .video-play {
+  background: #f6e0f2;
+  color: #ff0000;
 }
 .video figcaption {
-  padding: 12px var(--gutter) 0;
+  padding: 12px 0 0;
   font-size: 14px;
   color: var(--muted);
 }
 
+/* Popup player: 90vw, kept inside the screen height */
+.video-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.92);
+}
+.video-popup iframe {
+  width: min(90vw, calc(90vh * 16 / 9));
+  aspect-ratio: 16 / 9;
+  border: 0;
+  background: #000;
+}
+.video-popup-close {
+  position: absolute;
+  top: 20px;
+  right: var(--gutter);
+  border: 0;
+  background: none;
+  color: #fff;
+  font: inherit;
+  font-family: "Times New Roman", Times, serif;
+  cursor: pointer;
+}
+.video-popup-close:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1100px) {
+  .videos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (max-width: 800px) {
   .videos-grid {
     grid-template-columns: 1fr;
     gap: 24px;
   }
+}
+
+/* ---------- videos page: no hero, so clear the overlaid top bar ---------- */
+.videos-page .videos {
+  margin-top: 0;
+  padding-top: calc(var(--space) + 40px);
 }
 
 /* ---------- uncropped image options ---------- */
@@ -415,6 +495,9 @@ h3 {
 .gig-hero-text {
   padding: 48px var(--gutter);
 }
+.gig-hero--end {
+  margin-top: var(--space);
+}
 .gig-hero .display {
   font-size: clamp(40px, 5.4vw, 92px);
 }
@@ -430,7 +513,7 @@ h3 {
   min-height: 560px;
   max-height: 1100px;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: right;
 }
 
 @media (max-width: 800px) {
@@ -447,22 +530,50 @@ h3 {
   }
 }
 
-/* ---------- gig page: Miletus caps headings, red titles + buttons ---------- */
+/* ---------- gig page: Helvetica headings, Miletus caps hero, red buttons ---------- */
 .gig-page h2 {
   font-family:
-    "Miletus Grotesk", "Helvetica Neue Local", Helvetica, Arial, sans-serif;
+    "Helvetica Neue Local", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
   line-height: 1.2;
   color: #000000;
 }
+.gig-page .gig-hero .display {
+  font-family:
+    "Miletus Grotesk", "Helvetica Neue Local", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
 .gig-page .button,
 .gig-page .button:visited {
-  background: #000000;
-  color: #fff;
+  background: #ff0000;
+  color: #f6e0f2;
 }
 .gig-page .button:hover {
-  background: #ff0000;
-  color: #fff;
+  background: #f6e0f2;
+  color: #ff0000;
+}
+.gig-page .button--large,
+.gig-page .button--large:visited {
+  padding: 24px 44px;
+  font-size: 20px;
+}
+
+/* Mobile: hero "Get tickets" pinned to the bottom of the screen */
+@media (max-width: 800px) {
+  .gig-page {
+    padding-bottom: calc(80px + env(safe-area-inset-bottom));
+  }
+  .gig-page .gig-hero-cta {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: env(safe-area-inset-bottom);
+    z-index: 20;
+    margin: 12px;
+    padding: 18px 24px;
+    /* !important beats the global no-shadow reset at the top of this file */
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
+    text-align: center;
+  }
 }
