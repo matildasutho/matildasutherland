@@ -449,20 +449,20 @@ h3 {
 
 /* ---------- gig page: Miletus caps headings, red titles + buttons ---------- */
 .gig-page h2 {
-  font-family: "Miletus Grotesk", "Helvetica Neue Local", Helvetica, Arial,
-    sans-serif;
+  font-family:
+    "Miletus Grotesk", "Helvetica Neue Local", Helvetica, Arial, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   line-height: 1.2;
-  color: #ff0000;
+  color: #000000;
 }
 .gig-page .button,
 .gig-page .button:visited {
-  background: #ff0000;
+  background: #000000;
   color: #fff;
 }
 .gig-page .button:hover {
-  background: #cc0000;
+  background: #ff0000;
   color: #fff;
 }
