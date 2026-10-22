@@ -6,11 +6,7 @@ function App() {
   return (
     <>
       <Routes>
-<<<<<<< HEAD
-        <Route path="/" element={<Splash />} />
-=======
         <Route path="/" element={<Home />} />
->>>>>>> dev
       </Routes>
     </>
   );
